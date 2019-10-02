@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0e1128c6-2123-4d4e-b150-8d650d5f57d6" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1R71ohwd5TGVne1CcZrT2xMZJyV" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="full.screen.before.presentation.mode" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/build/classes/java/main/bookProject" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="MTConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Ukhur\OneDrive - NTNU\1. Semester\Programmering 1\Prosjektoppgave\build" />
+      <recent name="C:\Users\Ukhur\OneDrive - NTNU\1. Semester\Programmering 1\Prosjektoppgave\src" />
+      <recent name="C:\Users\Ukhur\OneDrive - NTNU\1. Semester\Programmering 1\Prosjektoppgave\source" />
+      <recent name="C:\Users\Ukhur\OneDrive - NTNU\1. Semester\Programmering 1\Prosjektoppgave\src\main\java" />
+      <recent name="C:\Users\Ukhur\OneDrive - NTNU\1. Semester\Programmering 1\Prosjektoppgave\src\main" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Ukhur\OneDrive - NTNU\1. Semester\Programmering 1\Prosjektoppgave\src" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.BookLibraryApp">
+    <configuration name="BookLibraryApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="bookProject.BookLibraryApp" />
+      <module name="Prosjektoppgave" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="bookProject.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BookRegister" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="C:\Program Files\AdoptOpenJDK\jdk-8.0.222.10-hotspot\jre" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="bookProject.BookRegister" />
+      <module name="Prosjektoppgave" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Java Scratch">
+      <option name="MAIN_CLASS_NAME" value="BookRegister" />
+      <module name="Prosjektoppgave" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.BookLibraryApp" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0e1128c6-2123-4d4e-b150-8d650d5f57d6" name="Default Changelist" comment="" />
+      <created>1569003497247</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1569003497247</updated>
+      <workItem from="1569003499816" duration="450000" />
+      <workItem from="1569007031171" duration="3868000" />
+      <workItem from="1569010928802" duration="1433000" />
+      <workItem from="1569012376403" duration="56000" />
+      <workItem from="1569012496092" duration="744000" />
+      <workItem from="1569312797850" duration="33000" />
+      <workItem from="1569312847173" duration="10668000" />
+      <workItem from="1569415030529" duration="19123000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+</project>
