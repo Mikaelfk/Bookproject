@@ -8,7 +8,7 @@ public class BookRegister {
 
     //Constructor
     public BookRegister(){
-        bookList = new ArrayList<Book>();
+        bookList = new ArrayList<>();
     }
 
     public void addTestBooks() {
@@ -61,7 +61,7 @@ public class BookRegister {
     }
 
     public ArrayList<Book> searchBookAuthor(String searchAuthor) {
-        ArrayList<Book> foundBooks = new ArrayList<Book>();
+        ArrayList<Book> foundBooks = new ArrayList<>();
         Iterator<Book> bookIterator = this.getIterator();
         while(bookIterator.hasNext()) {
             Book book = bookIterator.next();

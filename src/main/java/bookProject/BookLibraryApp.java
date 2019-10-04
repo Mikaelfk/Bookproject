@@ -3,7 +3,7 @@ package bookProject;
 import java.util.Iterator;
 
 public class BookLibraryApp {
-        BookRegister bookRegister;
+        private BookRegister bookRegister;
 
     public void init() {
         bookRegister = new BookRegister();
