@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="0e1128c6-2123-4d4e-b150-8d650d5f57d6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/production/Prosjektoppgave/bookProject/BookLibraryApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/production/Prosjektoppgave/bookProject/BookLibraryApp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/production/Prosjektoppgave/bookProject/BookRegister.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/production/Prosjektoppgave/bookProject/BookRegister.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/bookProject/BookLibraryApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bookProject/BookLibraryApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/bookProject/BookRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bookProject/BookRegister.java" afterDir="false" />
     </list>
@@ -47,11 +49,11 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="full.screen.before.presentation.mode" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../gitlab/Legoprosjekt/gruppe-1/Lego/build.gradle" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="MTConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -135,6 +137,20 @@
       <workItem from="1569312847173" duration="10668000" />
       <workItem from="1569415030529" duration="19123000" />
       <workItem from="1570028709333" duration="1774000" />
+      <workItem from="1570651818211" duration="1674000" />
+      <workItem from="1570717352230" duration="111000" />
+      <workItem from="1570788847812" duration="609000" />
+      <workItem from="1570791450059" duration="733000" />
+      <workItem from="1570787721065" duration="37000" />
+      <workItem from="1571127159081" duration="1617000" />
+      <workItem from="1571131454116" duration="1887000" />
+      <workItem from="1571133412168" duration="155000" />
+      <workItem from="1571140612204" duration="667000" />
+      <workItem from="1571142322052" duration="1813000" />
+      <workItem from="1571213851777" duration="15000" />
+      <workItem from="1571303574197" duration="1494000" />
+      <workItem from="1571386346920" duration="4897000" />
+      <workItem from="1571403495552" duration="12000" />
     </task>
     <task id="LOCAL−00001" summary="hei">
       <created>1570028730097</created>
@@ -159,7 +175,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
