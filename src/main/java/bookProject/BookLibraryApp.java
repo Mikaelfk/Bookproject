@@ -51,9 +51,15 @@ public class BookLibraryApp {
 
             }
             //Search by EAN function
-            else if(command.equals("searchEAN")) {
+            else if(command.equals("searchean")) {
                 System.out.println("Type the EAN number of the book you are searching for");
                 String EAN = scanner.next().toLowerCase();
+                if(bookRegister.searchBookEAN(EAN) == null) {
+                    System.out.println("There is no book in the registry with this EAN number");
+                }
+                else {
+                    bookRegister.searchBookEAN(EAN).printBook();
+                }
 
             }
             //function to add a book
