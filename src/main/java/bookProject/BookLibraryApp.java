@@ -28,7 +28,7 @@ public class BookLibraryApp {
                 System.out.println("Type the title of the book you are searching for");
                 String book = scanner.next();
                 if(bookRegister.searchBookTitle(book) == null) {
-                    System.out.println("This book does not exist");
+                    System.out.println("There is no book in the registry with this title");
                 }
                 else {
                     bookRegister.searchBookTitle(book).printBook();
