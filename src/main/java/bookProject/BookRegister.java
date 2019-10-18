@@ -28,12 +28,6 @@ public class BookRegister {
             book.printBook();
         }
     }
-    public void listAllBooks2() {
-        Iterator<Book> bookIterator = this.getIterator();
-        while(bookIterator.hasNext()) {
-            bookIterator.next().printBook();
-        }
-    }
 
     public void searchBook (String searchBook) {
         boolean found = false;

@@ -64,11 +64,26 @@ public class BookLibraryApp {
             }
             //function to add a book
             else if(command.equals("add")) {
-
+                System.out.println("Type the title of the book you wish to add");
+                String title = scanner.next();
+                System.out.println("Type the author of the book you wish to add");
+                String author = scanner.next();
+                System.out.println("Type in the publisher of the book you wish to add");
+                String publisher = scanner.next();
+                System.out.println("Type in the year the book was released");
+                int yearReleased = scanner.nextInt();
+                System.out.println("Type in the amount of pages in the book");
+                int pages = scanner.nextInt();
+                System.out.println("Type the EAN number of the book you wish to add");
+                String EAN = scanner.next();
+                Boolean loaned = false;
+                bookRegister.addBook(title, author, publisher, yearReleased, pages, EAN, loaned);
             }
             //function to remove a book
             else if(command.equals("remove")) {
-
+                System.out.println("Type in the title, author, or EAN number of the book you wish to delete");
+                String search = scanner.next();
+                bookRegister.deleteBook(search);
             }
             //function to list all books
             else if(command.equals("list")) {
