@@ -35,7 +35,7 @@ public class BookRegister {
         }
     }
 
-    public void searchBook(String searchBook) {
+    public void searchBook (String searchBook) {
         boolean found = false;
         for(Book book : bookList) {
             if (book.getBookTitle().toLowerCase().contains(searchBook.toLowerCase())
@@ -61,7 +61,7 @@ public class BookRegister {
         return null;
     }
 
-    public ArrayList<Book> searchBookAuthor(String searchAuthor) {
+    public ArrayList<Book> searchBookAuthor (String searchAuthor) {
         ArrayList<Book> foundBooks = new ArrayList<>();
         Iterator<Book> bookIterator = this.getIterator();
         while(bookIterator.hasNext()) {
@@ -73,7 +73,7 @@ public class BookRegister {
         return foundBooks;
     }
 
-    public void deleteBook(String deleteBook) {
+    public void deleteBook (String deleteBook) {
         boolean found = false;
         for(int i = 0; i < bookList.size(); i++) {
             if (bookList.get(i).getBookTitle().toLowerCase().equals(deleteBook.toLowerCase())
