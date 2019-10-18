@@ -7,7 +7,6 @@ public class BookLibraryApp {
 
     private BookRegister bookRegister;
 
-
     public void init() {
         Scanner scanner;
         bookRegister = new BookRegister();
@@ -34,7 +33,6 @@ public class BookLibraryApp {
                 else {
                     bookRegister.searchBookTitle(book).printBook();
                 }
-
             }
             //Search by author function
             else if(command.equals("searchauthor")) {
@@ -48,7 +46,6 @@ public class BookLibraryApp {
                         bookRegister.searchBookAuthor(author).get(i).printBook();
                     }
                 }
-
             }
             //Search by EAN function
             else if(command.equals("searchean")) {
@@ -60,7 +57,6 @@ public class BookLibraryApp {
                 else {
                     bookRegister.searchBookEAN(EAN).printBook();
                 }
-
             }
             //function to add a book
             else if(command.equals("add")) {
