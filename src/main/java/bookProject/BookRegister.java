@@ -73,6 +73,17 @@ public class BookRegister {
         return foundBooks;
     }
 
+    public Book searchBookEAN (String ean) {
+        Iterator<Book> bookIterator = this.getIterator();
+        while(bookIterator.hasNext()) {
+            Book book = bookIterator.next();
+            if(book.getBookEAN().toLowerCase().contains(ean.toLowerCase())) {
+                return book;
+            }
+        }
+        return null;
+    }
+
     public void deleteBook (String deleteBook) {
         boolean found = false;
         for(int i = 0; i < bookList.size(); i++) {
