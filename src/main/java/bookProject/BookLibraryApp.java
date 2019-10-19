@@ -8,15 +8,14 @@ public class BookLibraryApp {
     private BookRegister bookRegister;
 
     public void init() {
-        Scanner scanner;
         bookRegister = new BookRegister();
         bookRegister.addTestBooks();
         System.out.println("Welcome to this book register.");
         System.out.println("You can search for books, add books and remove books");
-        System.out.println("Type help for list of commands");
+        System.out.println("Type 'help' for list of commands");
         boolean finished = false;
         while(!finished) {
-            scanner = new Scanner(System.in);
+            Scanner scanner = new Scanner(System.in);
             String command = scanner.next().toLowerCase();
 
             //help function
@@ -83,11 +82,15 @@ public class BookLibraryApp {
             }
             //function to list all books
             else if(command.equals("list")) {
+                System.out.println("Here is a list of all the books in the bookregistry");
                 listAllBooks();
             }
             //function to quit the program
             else if(command.equals("quit")) {
                 finished = true;
+            }
+            else {
+                System.out.println("This command does not exist");
             }
         }
     }

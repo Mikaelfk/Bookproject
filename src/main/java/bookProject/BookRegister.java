@@ -1,6 +1,7 @@
 package bookProject;
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.Scanner;
 
 
 public class BookRegister {
@@ -48,7 +49,7 @@ public class BookRegister {
         Iterator<Book> bookIterator = this.getIterator();
         while(bookIterator.hasNext()) {
             Book book = bookIterator.next();
-            if(book.getBookTitle().toLowerCase().contains(searchBook.toLowerCase())) {
+            if(book.getBookTitle().toLowerCase().equals(searchBook.toLowerCase())) {
                 return book;
             }
         }
@@ -60,7 +61,7 @@ public class BookRegister {
         Iterator<Book> bookIterator = this.getIterator();
         while(bookIterator.hasNext()) {
             Book book = bookIterator.next();
-            if (book.getBookAuthor().toLowerCase().contains(searchAuthor.toLowerCase())) {
+            if (book.getBookAuthor().toLowerCase().equals(searchAuthor.toLowerCase())) {
                 foundBooks.add(book);
             }
         }
@@ -71,7 +72,7 @@ public class BookRegister {
         Iterator<Book> bookIterator = this.getIterator();
         while(bookIterator.hasNext()) {
             Book book = bookIterator.next();
-            if(book.getBookEAN().toLowerCase().contains(ean.toLowerCase())) {
+            if(book.getBookEAN().toLowerCase().equals(ean.toLowerCase())) {
                 return book;
             }
         }
@@ -80,12 +81,22 @@ public class BookRegister {
 
     public void deleteBook (String deleteBook) {
         boolean found = false;
+        Scanner sc = new Scanner(System.in);
         for(int i = 0; i < bookList.size(); i++) {
             if (bookList.get(i).getBookTitle().toLowerCase().equals(deleteBook.toLowerCase())
                     || bookList.get(i).getBookAuthor().toLowerCase().equals(deleteBook.toLowerCase())
                     || bookList.get(i).getBookEAN().equals(deleteBook)) {
                 found = true;
-                bookList.remove(i);
+                bookList.get(i).printBook();
+                System.out.println("Type 'yes' if this is the book you wish to remove");
+                String ans = sc.next().toLowerCase();
+                if(ans.equals("yes")) {
+                    System.out.println("You have deleted " + bookList.get(i).getBookTitle() + " From the bookregistry");
+                    bookList.remove(i);
+                }
+                else {
+                    System.out.println("You have not deleted the book");
+                }
             }
         }
         if(!found) {

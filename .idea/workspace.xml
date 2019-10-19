@@ -5,6 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/production/Prosjektoppgave/bookProject/BookRegister.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/production/Prosjektoppgave/bookProject/BookRegister.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/bookProject/BookLibraryApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bookProject/BookLibraryApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bookProject/BookRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bookProject/BookRegister.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -150,7 +151,9 @@
       <workItem from="1571213851777" duration="15000" />
       <workItem from="1571303574197" duration="1494000" />
       <workItem from="1571386346920" duration="4897000" />
-      <workItem from="1571403495552" duration="9074000" />
+      <workItem from="1571403495552" duration="11542000" />
+      <workItem from="1571491211568" duration="8000" />
+      <workItem from="1571491402007" duration="293000" />
     </task>
     <task id="LOCAL−00001" summary="hei">
       <created>1570028730097</created>
@@ -206,7 +209,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571411283139</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Printing changes">
+      <created>1571413135171</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1571413135171</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -233,6 +243,7 @@
     <MESSAGE value="Added method which searches the bookregistry by EAN number" />
     <MESSAGE value="Finished maybe???" />
     <MESSAGE value="Spacing fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Spacing fixes" />
+    <MESSAGE value="Printing changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Printing changes" />
   </component>
 </project>
