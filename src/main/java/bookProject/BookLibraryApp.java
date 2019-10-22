@@ -18,7 +18,6 @@ public class BookLibraryApp {
         while(!finished) {
             scanner = new Scanner(System.in);
             String command = scanner.next().toLowerCase();
-
             //help function
             if (command.equals("help")) {
                 printHelp();
@@ -72,6 +71,7 @@ public class BookLibraryApp {
             System.out.println("There is no book in the registry with this title");
         }
         else {
+            System.out.println("----------------------------------");
             bookRegister.searchBookTitle(book).printBook();
         }
     }
@@ -85,6 +85,7 @@ public class BookLibraryApp {
         }
         else {
             for (int i = 0; i < bookRegister.searchBookAuthor(author).size(); i++) {
+                System.out.println("----------------------------------");
                 bookRegister.searchBookAuthor(author).get(i).printBook();
             }
         }
@@ -97,6 +98,7 @@ public class BookLibraryApp {
             System.out.println("There is no book in the registry with this EAN number");
         }
         else {
+            System.out.println("----------------------------------");
             bookRegister.searchBookEAN(EAN).printBook();
         }
     }
@@ -119,7 +121,7 @@ public class BookLibraryApp {
         Boolean loaned = false;
         Boolean answered = false;
         while(!answered) {
-            String rented = scanner.next();
+            String rented = scanner.next().toLowerCase();
             if (rented.equals("yes")) {
                 answered = true;
                 loaned = true;
@@ -138,12 +140,14 @@ public class BookLibraryApp {
     public void removeBook() {
         System.out.println("Type in the title, author, or EAN number of the book you wish to delete");
         String search = scanner.next();
+        System.out.println("----------------------------------");
         bookRegister.deleteBook(search);
     }
 
     //method which prints all the books
     public void listAllBooks() {
         System.out.println("Here is a list of all the books in the bookregistry");
+        System.out.println("----------------------------------");
         Iterator<Book> bookIterator = bookRegister.getIterator();
         while(bookIterator.hasNext()) {
             bookIterator.next().printBook();

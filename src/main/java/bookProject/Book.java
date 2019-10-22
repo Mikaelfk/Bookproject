@@ -23,7 +23,6 @@ public class Book {
     //Methods:
 
     public void printBook() {
-            System.out.println("----------------------------------");
             System.out.println("Title: "+ this.getBookTitle());
             System.out.println("Author: "+ this.getBookAuthor());
             System.out.println("Publisher: "+ this.getBookPublisher());
@@ -36,6 +35,7 @@ public class Book {
             else {
                 System.out.println("The book is currently available");
             }
+            System.out.println("----------------------------------");
 
     }
     
