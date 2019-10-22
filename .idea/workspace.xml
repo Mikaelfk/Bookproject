@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="0e1128c6-2123-4d4e-b150-8d650d5f57d6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/production/Prosjektoppgave/bookProject/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/production/Prosjektoppgave/bookProject/Book.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/production/Prosjektoppgave/bookProject/BookRegister.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/production/Prosjektoppgave/bookProject/BookRegister.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bookProject/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bookProject/Book.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/bookProject/BookLibraryApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bookProject/BookLibraryApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/bookProject/BookRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bookProject/BookRegister.java" afterDir="false" />
     </list>
@@ -160,7 +160,7 @@
       <workItem from="1571689143537" duration="1938000" />
       <workItem from="1571732103328" duration="13201000" />
       <workItem from="1571746509734" duration="1047000" />
-      <workItem from="1571747570903" duration="5298000" />
+      <workItem from="1571747570903" duration="6041000" />
     </task>
     <task id="LOCAL−00001" summary="hei">
       <created>1570028730097</created>
@@ -251,7 +251,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571743499974</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Added a checkInt method and a listAllBooksSimple method.">
+      <created>1571755775801</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1571755775801</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -283,6 +290,7 @@
     <MESSAGE value="Finished" />
     <MESSAGE value="Small fixes." />
     <MESSAGE value="Added exceptions which prevents crashing" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added exceptions which prevents crashing" />
+    <MESSAGE value="Added a checkInt method and a listAllBooksSimple method." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added a checkInt method and a listAllBooksSimple method." />
   </component>
 </project>

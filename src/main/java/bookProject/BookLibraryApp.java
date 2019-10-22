@@ -16,6 +16,7 @@ public class BookLibraryApp {
         System.out.println("Type 'help' for list of commands");
         boolean finished = false;
         while(!finished) {
+            System.out.println("Type a command");
             System.out.print(">");
             scanner = new Scanner(System.in);
             String command = scanner.nextLine().toLowerCase().trim();
@@ -24,15 +25,15 @@ public class BookLibraryApp {
                 printHelp();
             }
             //Search by title function
-            else if(command.equals("search title")) {
+            else if(command.equals("search title") || command.equals("searchtitle")) {
                 searchTitle();
             }
             //Search by author function
-            else if(command.equals("search author")) {
+            else if(command.equals("search author") || command.equals("searchauthor")) {
                 searchAuthor();
             }
             //Search by EAN function
-            else if(command.equals("search ean")) {
+            else if(command.equals("search ean") || command.equals("searchean")) {
                 searchEAN();
             }
             //function to add a book
@@ -62,7 +63,6 @@ public class BookLibraryApp {
 
     //method which prints out available commands
     public void printHelp() {
-        System.out.println("Type one of these commands to get started");
         System.out.println("Available commands:");
         System.out.println("help, Search Title, Search Author, Search EAN, add, remove, list, list simple, quit");
     }

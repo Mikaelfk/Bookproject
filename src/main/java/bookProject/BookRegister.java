@@ -15,7 +15,7 @@ public class BookRegister {
 
     public void addTestBooks() {
         bookList.add(new Book("Name1", "Author1", "Publisher1", 2019, 500, "1234567890123", false));
-        bookList.add(new Book("Name2", "Author1", "Publisher2", 2018, 600, "1234567890124", true));
+        bookList.add(new Book("Name2", "Author2", "Publisher2", 2018, 600, "1234567890124", true));
         bookList.add(new Book("Name3", "Author3", "Publisher3", 2017, 700, "1234567890125", true));
         bookList.add(new Book("Name4", "Author4", "Publisher4", 2016, 800, "1234567890126", false));
     }
