@@ -16,22 +16,23 @@ public class BookLibraryApp {
         System.out.println("Type 'help' for list of commands");
         boolean finished = false;
         while(!finished) {
+            System.out.print(">");
             scanner = new Scanner(System.in);
-            String command = scanner.next().toLowerCase();
+            String command = scanner.nextLine().toLowerCase().trim();
             //help function
             if (command.equals("help")) {
                 printHelp();
             }
             //Search by title function
-            else if(command.equals("searchtitle")) {
+            else if(command.equals("search title")) {
                 searchTitle();
             }
             //Search by author function
-            else if(command.equals("searchauthor")) {
+            else if(command.equals("search author")) {
                 searchAuthor();
             }
             //Search by EAN function
-            else if(command.equals("searchean")) {
+            else if(command.equals("search ean")) {
                 searchEAN();
             }
             //function to add a book
@@ -60,13 +61,13 @@ public class BookLibraryApp {
     public void printHelp() {
         System.out.println("Type one of these commands to get started");
         System.out.println("Available commands:");
-        System.out.println("help, searchTitle, searchAuthor, searchEAN, add, remove, list, quit");
+        System.out.println("help, Search Title, Search Author, Search EAN, add, remove, list, quit");
     }
 
     //method which searches by title
     public void searchTitle() {
         System.out.println("Type the title of the book you are searching for");
-        String book = scanner.next();
+        String book = scanner.nextLine();
         if(bookRegister.searchBookTitle(book) == null) {
             System.out.println("There is no book in the registry with this title");
         }
@@ -79,13 +80,13 @@ public class BookLibraryApp {
     //method which searches by author
     public void searchAuthor() {
         System.out.println("Type the author of the book or books you are searching for");
-        String author = scanner.next().toLowerCase();
+        String author = scanner.nextLine().toLowerCase();
         if(bookRegister.searchBookAuthor(author).size() == 0) {
             System.out.println("There is no book in the register written by this author");
         }
         else {
+            System.out.println("----------------------------------");
             for (int i = 0; i < bookRegister.searchBookAuthor(author).size(); i++) {
-                System.out.println("----------------------------------");
                 bookRegister.searchBookAuthor(author).get(i).printBook();
             }
         }
@@ -93,7 +94,7 @@ public class BookLibraryApp {
 
     public void searchEAN() {
         System.out.println("Type the EAN number of the book you are searching for");
-        String EAN = scanner.next().toLowerCase();
+        String EAN = scanner.nextLine().toLowerCase();
         if(bookRegister.searchBookEAN(EAN) == null) {
             System.out.println("There is no book in the registry with this EAN number");
         }
@@ -106,27 +107,48 @@ public class BookLibraryApp {
     //method which adds a book
     public void addBook() {
         System.out.println("Type the title of the book you wish to add");
-        String title = scanner.next();
+        String title = scanner.nextLine();
         System.out.println("Type the author of the book you wish to add");
-        String author = scanner.next();
+        String author = scanner.nextLine();
         System.out.println("Type in the publisher of the book you wish to add");
-        String publisher = scanner.next();
+        String publisher = scanner.nextLine();
         System.out.println("Type in the year the book was released");
-        int yearReleased = scanner.nextInt();
+        boolean done = false;
+        int yearReleased = 0;
+        do {
+            try {
+                scanner = new Scanner(System.in);
+                yearReleased = scanner.nextInt();
+                done = true;
+            } catch (Exception e) {
+                System.out.println("This is not a number, please input a number");
+            }
+        } while(!done);
+
         System.out.println("Type in the amount of pages in the book");
-        int pages = scanner.nextInt();
+        done = false;
+        int pages = 0;
+        do {
+            try {
+                scanner = new Scanner(System.in);
+                pages = scanner.nextInt();
+                done = true;
+            } catch (Exception e) {
+                System.out.println("This is not a number, please input a number");
+            }
+        } while(!done);
         System.out.println("Type the EAN number of the book you wish to add");
-        String EAN = scanner.next();
+        scanner.nextLine();
+        String EAN = scanner.nextLine();
         System.out.println("Is the book rented, type 'yes' or 'no'");
         Boolean loaned = false;
         Boolean answered = false;
         while(!answered) {
-            String rented = scanner.next().toLowerCase();
+            String rented = scanner.nextLine().toLowerCase();
             if (rented.equals("yes")) {
                 answered = true;
                 loaned = true;
             } else if (rented.equals("no")) {
-                loaned = false;
                 answered = true;
             } else {
                 System.out.println("Please type in 'yes' or 'no'");
@@ -139,7 +161,7 @@ public class BookLibraryApp {
     //method which removes a book
     public void removeBook() {
         System.out.println("Type in the title, author, or EAN number of the book you wish to delete");
-        String search = scanner.next();
+        String search = scanner.nextLine();
         System.out.println("----------------------------------");
         bookRegister.deleteBook(search);
     }
