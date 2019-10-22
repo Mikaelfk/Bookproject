@@ -42,18 +42,6 @@ public class Book {
     public void printBookSimple() {
         System.out.println("Title: " + this.getBookTitle() + " | Author: " + this.getBookAuthor() + " | Publisher: " + this.getBookPublisher() + " | Year published: " + this.getBookYearReleased());
     }
-    
-    public void setStatusAvailable() {
-        bookLoaned = false;
-    }
-    
-    public void setStatusUnavailable() {
-        bookLoaned = true;
-    }
-    
-    public void setBookEAN(String EAN){
-        bookEAN = EAN;
-    }
 
     public String getBookTitle() {
         return bookTitle;

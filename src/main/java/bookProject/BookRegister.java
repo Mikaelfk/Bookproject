@@ -24,27 +24,6 @@ public class BookRegister {
         bookList.add(new Book(title, author, publisher, yearReleased, pages, EAN, loaned));
     }
 
-    public void printBooks() {
-        for(Book book : bookList) {
-            book.printBook();
-        }
-    }
-
-    public void searchBook (String searchBook) {
-        boolean found = false;
-        for(Book book : bookList) {
-            if (book.getBookTitle().toLowerCase().contains(searchBook.toLowerCase())
-                    || book.getBookAuthor().toLowerCase().contains(searchBook.toLowerCase())
-                    || book.getBookEAN().contains(searchBook)) {
-                found = true;
-                book.printBook();
-            }
-        }
-        if(!found) {
-            System.out.println("This book does not exist");
-        }
-    }
-
     public Book searchBookTitle(String searchBook) {
         Iterator<Book> bookIterator = this.getIterator();
         while(bookIterator.hasNext()) {
