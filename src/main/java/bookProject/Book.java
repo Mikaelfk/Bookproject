@@ -38,6 +38,10 @@ public class Book {
             System.out.println("----------------------------------");
 
     }
+
+    public void printBookSimple() {
+        System.out.println("Title: " + this.getBookTitle() + " | Author: " + this.getBookAuthor() + " | Publisher: " + this.getBookPublisher() + " | Year published: " + this.getBookYearReleased());
+    }
     
     public void setStatusAvailable() {
         bookLoaned = false;

@@ -3,7 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="0e1128c6-2123-4d4e-b150-8d650d5f57d6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/production/Prosjektoppgave/bookProject/BookRegister.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/production/Prosjektoppgave/bookProject/BookRegister.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bookProject/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bookProject/Book.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/bookProject/BookLibraryApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bookProject/BookLibraryApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bookProject/BookRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bookProject/BookRegister.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -52,21 +55,21 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="MTConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Ukhur\OneDrive - NTNU\1. Semester\Programmering 1\Prosjektoppgave\src" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Ukhur\OneDrive - NTNU\1. Semester\Programmering 1\Prosjektoppgave\build" />
       <recent name="C:\Users\Ukhur\OneDrive - NTNU\1. Semester\Programmering 1\Prosjektoppgave\src" />
       <recent name="C:\Users\Ukhur\OneDrive - NTNU\1. Semester\Programmering 1\Prosjektoppgave\source" />
       <recent name="C:\Users\Ukhur\OneDrive - NTNU\1. Semester\Programmering 1\Prosjektoppgave\src\main\java" />
       <recent name="C:\Users\Ukhur\OneDrive - NTNU\1. Semester\Programmering 1\Prosjektoppgave\src\main" />
-    </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Ukhur\OneDrive - NTNU\1. Semester\Programmering 1\Prosjektoppgave\src" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -155,7 +158,9 @@
       <workItem from="1571653252155" duration="3609000" />
       <workItem from="1571664510085" duration="26000" />
       <workItem from="1571689143537" duration="1938000" />
-      <workItem from="1571732103328" duration="10566000" />
+      <workItem from="1571732103328" duration="13201000" />
+      <workItem from="1571746509734" duration="1047000" />
+      <workItem from="1571747570903" duration="5298000" />
     </task>
     <task id="LOCAL−00001" summary="hei">
       <created>1570028730097</created>
@@ -239,7 +244,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571737731259</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Added exceptions which prevents crashing">
+      <created>1571743499974</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1571743499974</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -270,6 +282,7 @@
     <MESSAGE value="Updated the deleteBook method" />
     <MESSAGE value="Finished" />
     <MESSAGE value="Small fixes." />
-    <option name="LAST_COMMIT_MESSAGE" value="Small fixes." />
+    <MESSAGE value="Added exceptions which prevents crashing" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added exceptions which prevents crashing" />
   </component>
 </project>

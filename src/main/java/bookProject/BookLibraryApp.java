@@ -47,6 +47,9 @@ public class BookLibraryApp {
             else if(command.equals("list")) {
                 listAllBooks();
             }
+            else if(command.equals("list simple")) {
+                listAllBooksSimple();
+            }
             //function to quit the program
             else if(command.equals("quit")) {
                 finished = true;
@@ -61,7 +64,7 @@ public class BookLibraryApp {
     public void printHelp() {
         System.out.println("Type one of these commands to get started");
         System.out.println("Available commands:");
-        System.out.println("help, Search Title, Search Author, Search EAN, add, remove, list, quit");
+        System.out.println("help, Search Title, Search Author, Search EAN, add, remove, list, list simple, quit");
     }
 
     //method which searches by title
@@ -113,32 +116,10 @@ public class BookLibraryApp {
         System.out.println("Type in the publisher of the book you wish to add");
         String publisher = scanner.nextLine();
         System.out.println("Type in the year the book was released");
-        boolean done = false;
-        int yearReleased = 0;
-        do {
-            try {
-                scanner = new Scanner(System.in);
-                yearReleased = scanner.nextInt();
-                done = true;
-            } catch (Exception e) {
-                System.out.println("This is not a number, please input a number");
-            }
-        } while(!done);
-
+        int yearReleased = checkInt();
         System.out.println("Type in the amount of pages in the book");
-        done = false;
-        int pages = 0;
-        do {
-            try {
-                scanner = new Scanner(System.in);
-                pages = scanner.nextInt();
-                done = true;
-            } catch (Exception e) {
-                System.out.println("This is not a number, please input a number");
-            }
-        } while(!done);
+        int pages = checkInt();
         System.out.println("Type the EAN number of the book you wish to add");
-        scanner.nextLine();
         String EAN = scanner.nextLine();
         System.out.println("Is the book rented, type 'yes' or 'no'");
         Boolean loaned = false;
@@ -174,6 +155,32 @@ public class BookLibraryApp {
         while(bookIterator.hasNext()) {
             bookIterator.next().printBook();
         }
+    }
+
+    public void listAllBooksSimple() {
+        System.out.println("Here is a list of all the books in the bookregistry");
+        Iterator<Book> bookIterator = bookRegister.getIterator();
+        int index = 0;
+        while(bookIterator.hasNext()) {
+            index++;
+            System.out.print(index + ": ");
+            bookIterator.next().printBookSimple();
+        }
+    }
+
+    public int checkInt() {
+        boolean done = false;
+        int input = 0;
+        do {
+            try {
+                scanner = new Scanner(System.in);
+                input = Integer.parseInt(scanner.nextLine());
+                done = true;
+            } catch (Exception e) {
+                System.out.println("This is not a valid number, please input a number");
+            }
+        } while(!done);
+        return input;
     }
 
     public static void main(String[] args) {
