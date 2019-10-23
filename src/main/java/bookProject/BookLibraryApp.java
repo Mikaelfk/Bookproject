@@ -94,7 +94,7 @@ public class BookLibraryApp {
             }
         }
     }
-
+    //method which searches by EAN number
     public void searchEAN() {
         System.out.println("Type the EAN number of the book you are searching for");
         String EAN = scanner.nextLine().toLowerCase();
@@ -168,6 +168,7 @@ public class BookLibraryApp {
         }
     }
 
+    //method that checks if input is a valid integer.
     public int checkInt() {
         boolean done = false;
         int input = 0;
