@@ -146,9 +146,13 @@ public class BookLibraryApp {
         System.out.println("Here is a list of all the books in the bookregistry");
         System.out.println("----------------------------------");
         Iterator<Book> bookIterator = bookRegister.getIterator();
+        int index = 0;
         while(bookIterator.hasNext()) {
+            index ++;
+            System.out.println("Book " + index + ":");
             bookIterator.next().printBook();
         }
+        System.out.println("Total books in the registry: " + index);
     }
 
     public void listAllBooksSimple() {
@@ -160,6 +164,7 @@ public class BookLibraryApp {
             System.out.print(index + ": ");
             bookIterator.next().printBookSimple();
         }
+        System.out.println("Total books in the registry: " + index);
     }
 
     //method that checks if input is a valid integer.
