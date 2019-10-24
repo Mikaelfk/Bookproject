@@ -15,13 +15,13 @@ public class BookRegister {
 
     //Adds 4 test books to the library
     public void addTestBooks() {
-        bookList.add(new Book("Name1", "Author1", "Publisher1", 2019, 500, "1234567890123", false));
-        bookList.add(new Book("Name2", "Author2", "Publisher2", 2018, 600, "1234567890124", true));
-        bookList.add(new Book("Name3", "Author3", "Publisher3", 2017, 700, "1234567890125", true));
-        bookList.add(new Book("Name4", "Author4", "Publisher4", 2016, 800, "1234567890126", false));
+        bookList.add(new Book("Title1", "Author1", "Publisher1", 2019, 500, "1234567890123", false));
+        bookList.add(new Book("Title2", "Author2", "Publisher2", 2018, 600, "1234567890124", true));
+        bookList.add(new Book("Title3", "Author3", "Publisher3", 2017, 700, "1234567890125", true));
+        bookList.add(new Book("Title4", "Author4", "Publisher4", 2016, 800, "1234567890126", false));
     }
 
-    //method whichs adds a book to the library
+    //method which adds a book to the library
     public void addBook(String title, String author, String publisher, int yearReleased, int pages, String EAN, boolean loaned) {
         bookList.add(new Book(title, author, publisher, yearReleased, pages, EAN, loaned));
     }

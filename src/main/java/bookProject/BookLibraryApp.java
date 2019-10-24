@@ -17,46 +17,40 @@ public class BookLibraryApp {
         boolean finished = false;
         while(!finished) {
             System.out.println("Type a command");
-            System.out.print(">");
+            System.out.print("> ");
             scanner = new Scanner(System.in);
-            String command = scanner.nextLine().toLowerCase().trim();
-            //help function
-            if (command.equals("help")) {
-                printHelp();
-            }
-            //Search by title function
-            else if(command.equals("search title") || command.equals("searchtitle")) {
-                searchTitle();
-            }
-            //Search by author function
-            else if(command.equals("search author") || command.equals("searchauthor")) {
-                searchAuthor();
-            }
-            //Search by EAN function
-            else if(command.equals("search ean") || command.equals("searchean")) {
-                searchEAN();
-            }
-            //function to add a book
-            else if(command.equals("add")) {
-                addBook();
-            }
-            //function to remove a book
-            else if(command.equals("remove")) {
-                removeBook();
-            }
-            //function to list all books
-            else if(command.equals("list")) {
-                listAllBooks();
-            }
-            else if(command.equals("list simple")) {
-                listAllBooksSimple();
-            }
-            //function to quit the program
-            else if(command.equals("quit")) {
-                finished = true;
-            }
-            else {
-                System.out.println("This command does not exist");
+            String command = scanner.nextLine().toLowerCase();
+            command = command.replaceAll("\\s","");
+            switch (command) {
+                case "help":
+                    printHelp();
+                    break;
+                case "searchtitle":
+                    searchTitle();
+                    break;
+                case "searchauthor":
+                    searchAuthor();
+                    break;
+                case "searchean":
+                    searchEAN();
+                    break;
+                case "add":
+                    addBook();
+                    break;
+                case "remove":
+                    removeBook();
+                    break;
+                case "list":
+                    listAllBooks();
+                    break;
+                case "listsimple":
+                    listAllBooksSimple();
+                    break;
+                case "quit":
+                    finished = true;
+                    break;
+                default:
+                    System.out.println("This command does not exist");
             }
         }
     }
@@ -122,8 +116,8 @@ public class BookLibraryApp {
         System.out.println("Type the EAN number of the book you wish to add");
         String EAN = scanner.nextLine();
         System.out.println("Is the book rented, type 'yes' or 'no'");
-        Boolean loaned = false;
-        Boolean answered = false;
+        boolean loaned = false;
+        boolean answered = false;
         while(!answered) {
             String rented = scanner.nextLine().toLowerCase();
             if (rented.equals("yes")) {

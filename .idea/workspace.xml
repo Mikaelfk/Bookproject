@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0e1128c6-2123-4d4e-b150-8d650d5f57d6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/production/Prosjektoppgave/bookProject/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/production/Prosjektoppgave/bookProject/Book.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/production/Prosjektoppgave/bookProject/BookRegister.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/production/Prosjektoppgave/bookProject/BookRegister.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/bookProject/BookLibraryApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bookProject/BookLibraryApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/bookProject/BookRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bookProject/BookRegister.java" afterDir="false" />
@@ -55,6 +54,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
@@ -164,7 +164,10 @@
       <workItem from="1571819781378" duration="3381000" />
       <workItem from="1571827983542" duration="757000" />
       <workItem from="1571844039697" duration="1126000" />
-      <workItem from="1571846005877" duration="495000" />
+      <workItem from="1571846005877" duration="6247000" />
+      <workItem from="1571912045056" duration="3208000" />
+      <workItem from="1571919595091" duration="420000" />
+      <workItem from="1571920503093" duration="445000" />
     </task>
     <task id="LOCAL−00001" summary="hei">
       <created>1570028730097</created>
@@ -276,7 +279,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571756602920</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Added comments and removed unused methods">
+      <created>1571846546104</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1571846546104</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -311,6 +321,7 @@
     <MESSAGE value="Added a checkInt method and a listAllBooksSimple method." />
     <MESSAGE value="made commands less sensitive to spaces" />
     <MESSAGE value="removed methods which were unused" />
-    <option name="LAST_COMMIT_MESSAGE" value="removed methods which were unused" />
+    <MESSAGE value="Added comments and removed unused methods" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added comments and removed unused methods" />
   </component>
 </project>
