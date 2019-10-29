@@ -179,7 +179,7 @@
       <workItem from="1572260424184" duration="6152000" />
       <workItem from="1572273824618" duration="9000" />
       <workItem from="1572341921917" duration="1557000" />
-      <workItem from="1572343914815" duration="760000" />
+      <workItem from="1572343914815" duration="1011000" />
     </task>
     <task id="LOCAL−00001" summary="hei">
       <created>1570028730097</created>
@@ -305,7 +305,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571921089510</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="General improvements and list methods now informs user if the registry is empty">
+      <created>1572344924028</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1572344924028</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -342,7 +349,8 @@
     <MESSAGE value="removed methods which were unused" />
     <MESSAGE value="Added comments and removed unused methods" />
     <MESSAGE value="Mby finished yes?" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mby finished yes?" />
+    <MESSAGE value="General improvements and list methods now informs user if the registry is empty" />
+    <option name="LAST_COMMIT_MESSAGE" value="General improvements and list methods now informs user if the registry is empty" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Bookproject$BookLibraryApp.ic" NAME="BookLibraryApp Coverage Results" MODIFIED="1572341945267" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
