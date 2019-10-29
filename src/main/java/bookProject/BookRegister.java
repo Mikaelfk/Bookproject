@@ -4,29 +4,29 @@ import java.util.Iterator;
 import java.util.Scanner;
 
 
-public class BookRegister {
+class BookRegister {
 
-    private ArrayList<Book> bookList;
+    private final ArrayList<Book> bookList;
 
     //Constructor
-    public BookRegister(){
+    BookRegister(){
         bookList = new ArrayList<>();
     }
 
     //Adds 4 test books to the library
-    public void addTestBooks() {
+    void addTestBooks() {
         bookList.add(new Book("Title1", "Author1", "Publisher1", 2019, 500, "1234567890123", false));
-        bookList.add(new Book("Title2", "Author2", "Publisher2", 2018, 600, "1234567890124", true));
-        bookList.add(new Book("Title3", "Author3", "Publisher3", 2017, 700, "1234567890125", true));
-        bookList.add(new Book("Title4", "Author4", "Publisher4", 2016, 800, "1234567890126", false));
+        bookList.add(new Book("Title2", "Author1", "Publisher2", 2018, 600, "1234567890124", true));
+        bookList.add(new Book("Title3", "Author1", "Publisher3", 2017, 700, "1234567890125", true));
+        bookList.add(new Book("Title4", "Author1", "Publisher4", 2016, 800, "1234567890126", false));
     }
 
     //method which adds a book to the library
-    public void addBook(String title, String author, String publisher, int yearReleased, int pages, String EAN, boolean loaned) {
+    void addBook(String title, String author, String publisher, int yearReleased, int pages, String EAN, boolean loaned) {
         bookList.add(new Book(title, author, publisher, yearReleased, pages, EAN, loaned));
     }
 
-    public Book searchBookTitle(String searchBook) {
+    Book searchBookTitle(String searchBook) {
         Iterator<Book> bookIterator = this.getIterator();
         while(bookIterator.hasNext()) {
             Book book = bookIterator.next();
@@ -37,7 +37,7 @@ public class BookRegister {
         return null;
     }
 
-    public ArrayList<Book> searchBookAuthor (String searchAuthor) {
+    ArrayList<Book> searchBookAuthor(String searchAuthor) {
         ArrayList<Book> foundBooks = new ArrayList<>();
         Iterator<Book> bookIterator = this.getIterator();
         while(bookIterator.hasNext()) {
@@ -49,7 +49,7 @@ public class BookRegister {
         return foundBooks;
     }
 
-    public Book searchBookEAN (String ean) {
+    Book searchBookEAN(String ean) {
         Iterator<Book> bookIterator = this.getIterator();
         while(bookIterator.hasNext()) {
             Book book = bookIterator.next();
@@ -61,7 +61,7 @@ public class BookRegister {
     }
 
     //Method to delete a book
-    public void deleteBook (String deleteBook) {
+    void deleteBook(String deleteBook) {
         boolean found = false;
         Scanner sc = new Scanner(System.in);
         //for loop that loops through the entire library
@@ -76,6 +76,7 @@ public class BookRegister {
                     found = true;
                     System.out.println("You have deleted " + bookList.get(i).getBookTitle() + " From the bookregistry");
                     bookList.remove(i);
+                    i--;
                 }
                 else {
                     System.out.println("You have not deleted the book");
@@ -87,7 +88,7 @@ public class BookRegister {
         }
     }
 
-    public Iterator<Book> getIterator() {
+    Iterator<Book> getIterator() {
         return this.bookList.iterator();
     }
 }

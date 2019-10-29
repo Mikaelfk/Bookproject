@@ -1,17 +1,17 @@
 package bookProject;
-public class Book {
+class Book {
 
     //Fields:
-    private String bookTitle;
-    private String bookAuthor;
-    private String bookPublisher;
-    private int bookYearReleased;
-    private int bookPages;
-    private String bookEAN;
-    private boolean bookLoaned;
+    private final String bookTitle;
+    private final String bookAuthor;
+    private final String bookPublisher;
+    private final int bookYearReleased;
+    private final int bookPages;
+    private final String bookEAN;
+    private final boolean bookLoaned;
     
     //Constructor:
-    public Book(String name, String author, String publisher, int yearReleased, int pages, String EAN, boolean loaned) {
+    Book(String name, String author, String publisher, int yearReleased, int pages, String EAN, boolean loaned) {
         this.bookTitle = name;
         this.bookAuthor = author;
         this.bookPublisher = publisher;
@@ -22,7 +22,7 @@ public class Book {
     }
     //Methods:
 
-    public void printBook() {
+    void printBook() {
             System.out.println("Title: "+ this.getBookTitle());
             System.out.println("Author: "+ this.getBookAuthor());
             System.out.println("Publisher: "+ this.getBookPublisher());
@@ -39,35 +39,35 @@ public class Book {
 
     }
 
-    public void printBookSimple() {
+    void printBookSimple() {
         System.out.println("Title: " + this.getBookTitle() + " | Author: " + this.getBookAuthor() + " | Publisher: " + this.getBookPublisher() + " | Year published: " + this.getBookYearReleased());
     }
 
-    public String getBookTitle() {
+    String getBookTitle() {
         return bookTitle;
     }
 
-    public String getBookAuthor() {
+    String getBookAuthor() {
         return bookAuthor;
     }
 
-    public String getBookPublisher() {
+    private String getBookPublisher() {
         return bookPublisher;
     }
 
-    public int getBookYearReleased() {
+    private int getBookYearReleased() {
         return bookYearReleased;
     }
 
-    public int getBookPages() {
+    private int getBookPages() {
         return bookPages;
     }
 
-    public String getBookEAN() {
+    String getBookEAN() {
         return bookEAN;
     }
 
-    public boolean getBookLoaned() {
+    private boolean getBookLoaned() {
         return bookLoaned;
     }
 }

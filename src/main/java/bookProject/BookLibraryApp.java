@@ -3,12 +3,12 @@ package bookProject;
 import java.util.Iterator;
 import java.util.Scanner;
 
-public class BookLibraryApp {
+class BookLibraryApp {
 
     private BookRegister bookRegister;
     private Scanner scanner;
 
-    public void init() {
+    private void init() {
         bookRegister = new BookRegister();
         bookRegister.addTestBooks();
         System.out.println("Welcome to this book register.");
@@ -20,7 +20,10 @@ public class BookLibraryApp {
             System.out.print("> ");
             scanner = new Scanner(System.in);
             String command = scanner.nextLine().toLowerCase();
+
+            //removes all spaces in the command
             command = command.replaceAll("\\s","");
+
             switch (command) {
                 case "help":
                     printHelp();
@@ -56,13 +59,13 @@ public class BookLibraryApp {
     }
 
     //method which prints out available commands
-    public void printHelp() {
+    private void printHelp() {
         System.out.println("Available commands:");
         System.out.println("help, Search Title, Search Author, Search EAN, add, remove, list, list simple, quit");
     }
 
     //method which searches by title
-    public void searchTitle() {
+    private void searchTitle() {
         System.out.println("Type the title of the book you are searching for");
         String book = scanner.nextLine();
         if(bookRegister.searchBookTitle(book) == null) {
@@ -75,7 +78,7 @@ public class BookLibraryApp {
     }
 
     //method which searches by author
-    public void searchAuthor() {
+    private void searchAuthor() {
         System.out.println("Type the author of the book or books you are searching for");
         String author = scanner.nextLine().toLowerCase();
         if(bookRegister.searchBookAuthor(author).size() == 0) {
@@ -89,7 +92,7 @@ public class BookLibraryApp {
         }
     }
     //method which searches by EAN number
-    public void searchEAN() {
+    private void searchEAN() {
         System.out.println("Type the EAN number of the book you are searching for");
         String EAN = scanner.nextLine().toLowerCase();
         if(bookRegister.searchBookEAN(EAN) == null) {
@@ -102,7 +105,7 @@ public class BookLibraryApp {
     }
 
     //method which adds a book
-    public void addBook() {
+    private void addBook() {
         System.out.println("Type the title of the book you wish to add");
         String title = scanner.nextLine();
         System.out.println("Type the author of the book you wish to add");
@@ -134,7 +137,7 @@ public class BookLibraryApp {
     }
 
     //method which removes a book
-    public void removeBook() {
+    private void removeBook() {
         System.out.println("Type in the title, author, or EAN number of the book you wish to delete");
         String search = scanner.nextLine();
         System.out.println("----------------------------------");
@@ -142,28 +145,38 @@ public class BookLibraryApp {
     }
 
     //method which prints all the books
-    public void listAllBooks() {
-        System.out.println("Here is a list of all the books in the bookregistry");
-        System.out.println("----------------------------------");
+    private void listAllBooks() {
         Iterator<Book> bookIterator = bookRegister.getIterator();
-        while(bookIterator.hasNext()) {
-            bookIterator.next().printBook();
+        if(!bookIterator.hasNext()) {
+            System.out.println("The registry is empty.");
+        }
+        else {
+            System.out.println("Here is a list of all the books in the bookregistry");
+            System.out.println("----------------------------------");
+            while (bookIterator.hasNext()) {
+                bookIterator.next().printBook();
+            }
         }
     }
 
-    public void listAllBooksSimple() {
-        System.out.println("Here is a list of all the books in the bookregistry");
+    private void listAllBooksSimple() {
         Iterator<Book> bookIterator = bookRegister.getIterator();
-        int index = 0;
-        while(bookIterator.hasNext()) {
-            index++;
-            System.out.print(index + ": ");
-            bookIterator.next().printBookSimple();
+        if(!bookIterator.hasNext()) {
+            System.out.println("The registry is empty.");
+        }
+        else {
+            System.out.println("Here is a list of all the books in the bookregistry");
+            int index = 0;
+            while (bookIterator.hasNext()) {
+                index++;
+                System.out.print(index + ": ");
+                bookIterator.next().printBookSimple();
+            }
         }
     }
 
     //method that checks if input is a valid integer.
-    public int checkInt() {
+    private int checkInt() {
         boolean done = false;
         int input = 0;
         do {

@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0e1128c6-2123-4d4e-b150-8d650d5f57d6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/ukhu.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/production/Prosjektoppgave/bookProject/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/production/Prosjektoppgave/bookProject/Book.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/production/Prosjektoppgave/bookProject/BookRegister.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/production/Prosjektoppgave/bookProject/BookRegister.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bookProject/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bookProject/Book.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/bookProject/BookLibraryApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bookProject/BookLibraryApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/bookProject/BookRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bookProject/BookRegister.java" afterDir="false" />
     </list>
@@ -12,6 +15,9 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="171" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -167,7 +173,13 @@
       <workItem from="1571846005877" duration="6247000" />
       <workItem from="1571912045056" duration="3208000" />
       <workItem from="1571919595091" duration="420000" />
-      <workItem from="1571920503093" duration="445000" />
+      <workItem from="1571920503093" duration="2270000" />
+      <workItem from="1571991940789" duration="660000" />
+      <workItem from="1571999371780" duration="185000" />
+      <workItem from="1572260424184" duration="6152000" />
+      <workItem from="1572273824618" duration="9000" />
+      <workItem from="1572341921917" duration="1557000" />
+      <workItem from="1572343914815" duration="760000" />
     </task>
     <task id="LOCAL−00001" summary="hei">
       <created>1570028730097</created>
@@ -286,7 +298,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571846546104</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Mby finished yes?">
+      <created>1571921089510</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1571921089510</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -322,6 +341,12 @@
     <MESSAGE value="made commands less sensitive to spaces" />
     <MESSAGE value="removed methods which were unused" />
     <MESSAGE value="Added comments and removed unused methods" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added comments and removed unused methods" />
+    <MESSAGE value="Mby finished yes?" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mby finished yes?" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Bookproject$BookLibraryApp.ic" NAME="BookLibraryApp Coverage Results" MODIFIED="1572341945267" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>bookProject.*</FILTER>
+    </SUITE>
   </component>
 </project>
