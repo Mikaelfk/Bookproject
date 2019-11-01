@@ -1,7 +1,8 @@
 package bookProject;
-
 import java.util.Iterator;
 import java.util.Scanner;
+
+
 
 class BookLibraryApp {
 
@@ -19,9 +20,8 @@ class BookLibraryApp {
             System.out.println("Type a command");
             System.out.print("> ");
             scanner = new Scanner(System.in);
-            String command = scanner.nextLine().toLowerCase();
-
             //removes all spaces in the command
+            String command = scanner.nextLine().toLowerCase();
             command = command.replaceAll("\\s","");
 
             switch (command) {

@@ -72,6 +72,7 @@ class BookRegister {
                 bookList.get(i).printBook();
                 System.out.println("Type 'yes' if this is the book you wish to remove, type 'no' if you do not wish to remove this book");
                 String ans = sc.next().toLowerCase();
+
                 if(ans.equals("yes")) {
                     found = true;
                     System.out.println("You have deleted " + bookList.get(i).getBookTitle() + " From the bookregistry");
