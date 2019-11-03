@@ -2,8 +2,6 @@ package bookProject;
 import java.util.Iterator;
 import java.util.Scanner;
 
-
-
 class BookLibraryApp {
 
     private BookRegister bookRegister;
