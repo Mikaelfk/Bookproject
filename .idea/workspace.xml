@@ -48,23 +48,6 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="SET_USER_NAME_GLOBALLY" value="false" />
   </component>
-  <component name="Git.Update.Project.Info.Tabs.Properties">
-    <option name="RECENT_FILTERS">
-      <map>
-        <entry key="Branch">
-          <value>
-            <list>
-              <RecentGroup>
-                <option name="FILTER_VALUES">
-                  <option value="master" />
-                </option>
-              </RecentGroup>
-            </list>
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
   <component name="ProjectId" id="1R71ohwd5TGVne1CcZrT2xMZJyV" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -76,24 +59,21 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Ukhur\OneDrive - NTNU\1. Semester\Programmering 1\Prosjektoppgave\src" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Ukhur\OneDrive - NTNU\1. Semester\Programmering 1\Prosjektoppgave\build" />
       <recent name="C:\Users\Ukhur\OneDrive - NTNU\1. Semester\Programmering 1\Prosjektoppgave\src" />
       <recent name="C:\Users\Ukhur\OneDrive - NTNU\1. Semester\Programmering 1\Prosjektoppgave\source" />
       <recent name="C:\Users\Ukhur\OneDrive - NTNU\1. Semester\Programmering 1\Prosjektoppgave\src\main\java" />
       <recent name="C:\Users\Ukhur\OneDrive - NTNU\1. Semester\Programmering 1\Prosjektoppgave\src\main" />
-    </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="" />
-    </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="bookProject" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Ukhur\OneDrive - NTNU\1. Semester\Programmering 1\Prosjektoppgave\src" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -197,24 +177,8 @@
       <workItem from="1572260424184" duration="6152000" />
       <workItem from="1572273824618" duration="9000" />
       <workItem from="1572341921917" duration="1557000" />
-      <workItem from="1572343914815" duration="2937000" />
-      <workItem from="1572438682418" duration="764000" />
-      <workItem from="1572523313553" duration="3779000" />
-      <workItem from="1572530943566" duration="173000" />
-      <workItem from="1572531337354" duration="495000" />
-      <workItem from="1572531848834" duration="110000" />
-      <workItem from="1572531976366" duration="323000" />
-      <workItem from="1572532860783" duration="40000" />
-      <workItem from="1572532914762" duration="81000" />
-      <workItem from="1572535615306" duration="499000" />
-      <workItem from="1572536127520" duration="59000" />
-      <workItem from="1572536199115" duration="4000" />
-      <workItem from="1572536295644" duration="24000" />
-      <workItem from="1572539224717" duration="179000" />
-      <workItem from="1572540759175" duration="197000" />
-      <workItem from="1572551185768" duration="997000" />
-      <workItem from="1572609727014" duration="65000" />
-      <workItem from="1572624114419" duration="4174000" />
+      <workItem from="1572343914815" duration="1011000" />
+      <workItem from="1572607016145" duration="2408000" />
     </task>
     <task id="LOCAL−00001" summary="hei">
       <created>1570028730097</created>
@@ -347,14 +311,7 @@
       <option name="project" value="LOCAL" />
       <updated>1572344924028</updated>
     </task>
-    <task id="LOCAL-00020" summary="General improvements and list methods now informs user if the registry is empty">
-      <created>1572345031631</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1572345031631</updated>
-    </task>
-    <option name="localTasksCounter" value="21" />
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

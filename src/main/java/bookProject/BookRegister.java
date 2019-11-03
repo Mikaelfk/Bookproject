@@ -3,6 +3,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Scanner;
 
+
 class BookRegister {
 
     private final ArrayList<Book> bookList;
@@ -22,8 +23,7 @@ class BookRegister {
 
     //method which adds a book to the library
     void addBook(String title, String author, String publisher, int yearReleased, int pages, String EAN, boolean loaned) {
-        Book book = new Book(title, author, publisher, yearReleased, pages, EAN, loaned);
-        bookList.add(book);
+        bookList.add(new Book(title, author, publisher, yearReleased, pages, EAN, loaned));
     }
 
     Book searchBookTitle(String searchBook) {
@@ -72,7 +72,8 @@ class BookRegister {
                 bookList.get(i).printBook();
                 System.out.println("Type 'yes' if this is the book you wish to remove, type 'no' if you do not wish to remove this book");
                 String ans = sc.next().toLowerCase();
-                if(ans.contains("yes")) {
+
+                if(ans.equals("yes")) {
                     found = true;
                     System.out.println("You have deleted " + bookList.get(i).getBookTitle() + " From the bookregistry");
                     bookList.remove(i);
