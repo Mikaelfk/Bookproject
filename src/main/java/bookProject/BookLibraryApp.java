@@ -1,7 +1,8 @@
 package bookProject;
-
 import java.util.Iterator;
 import java.util.Scanner;
+
+
 
 class BookLibraryApp {
 
@@ -15,13 +16,12 @@ class BookLibraryApp {
         System.out.println("You can search for books, add books and remove books");
         System.out.println("Type 'help' for list of commands");
         boolean finished = false;
-        while(!finished) {
+        while (!finished) {
             System.out.println("Type a command");
             System.out.print("> ");
             scanner = new Scanner(System.in);
-            String command = scanner.nextLine().toLowerCase();
-
             //removes all spaces in the command
+            String command = scanner.nextLine().toLowerCase();
             command = command.replaceAll("\\s","");
 
             switch (command) {
@@ -68,10 +68,9 @@ class BookLibraryApp {
     private void searchTitle() {
         System.out.println("Type the title of the book you are searching for");
         String book = scanner.nextLine();
-        if(bookRegister.searchBookTitle(book) == null) {
+        if (bookRegister.searchBookTitle(book) == null) {
             System.out.println("There is no book in the registry with this title");
-        }
-        else {
+        } else {
             System.out.println("----------------------------------");
             bookRegister.searchBookTitle(book).printBook();
         }
@@ -81,30 +80,30 @@ class BookLibraryApp {
     private void searchAuthor() {
         System.out.println("Type the author of the book or books you are searching for");
         String author = scanner.nextLine().toLowerCase();
-        if(bookRegister.searchBookAuthor(author).size() == 0) {
+        if (bookRegister.searchBookAuthor(author).size() == 0) {
             System.out.println("There is no book in the register written by this author");
-        }
-        else {
+        } else {
             System.out.println("----------------------------------");
             for (int i = 0; i < bookRegister.searchBookAuthor(author).size(); i++) {
                 bookRegister.searchBookAuthor(author).get(i).printBook();
             }
         }
     }
+
     //method which searches by EAN number
     private void searchEAN() {
         System.out.println("Type the EAN number of the book you are searching for");
         String EAN = scanner.nextLine().toLowerCase();
-        if(bookRegister.searchBookEAN(EAN) == null) {
+        if (bookRegister.searchBookEAN(EAN) == null) {
             System.out.println("There is no book in the registry with this EAN number");
-        }
-        else {
+        } else {
             System.out.println("----------------------------------");
             bookRegister.searchBookEAN(EAN).printBook();
         }
     }
 
     //method which adds a book
+
     private void addBook() {
         System.out.println("Type the title of the book you wish to add");
         String title = scanner.nextLine();
@@ -118,10 +117,23 @@ class BookLibraryApp {
         int pages = checkInt();
         System.out.println("Type the EAN number of the book you wish to add");
         String EAN = scanner.nextLine();
+        boolean done = false;
+        while(!done) {
+            if (bookRegister.searchBookEAN(EAN) != null) {
+                System.out.println("A book with this EAN number already exists, please enter a different EAN number");
+                EAN = scanner.nextLine();
+                if (bookRegister.searchBookEAN(EAN) == null) {
+                    done = true;
+                }
+            }
+            else {
+                done = true;
+            }
+        }
         System.out.println("Is the book rented, type 'yes' or 'no'");
         boolean loaned = false;
         boolean answered = false;
-        while(!answered) {
+        while (!answered) {
             String rented = scanner.nextLine().toLowerCase();
             if (rented.equals("yes")) {
                 answered = true;
@@ -131,9 +143,10 @@ class BookLibraryApp {
             } else {
                 System.out.println("Please type in 'yes' or 'no'");
             }
+
+            System.out.println("The book has been added to the registry");
+            bookRegister.addBook(title, author, publisher, yearReleased, pages, EAN, loaned);
         }
-        System.out.println("The book has been added to the registry");
-        bookRegister.addBook(title, author, publisher, yearReleased, pages, EAN, loaned);
     }
 
     //method which removes a book
@@ -147,10 +160,9 @@ class BookLibraryApp {
     //method which prints all the books
     private void listAllBooks() {
         Iterator<Book> bookIterator = bookRegister.getIterator();
-        if(!bookIterator.hasNext()) {
+        if (!bookIterator.hasNext()) {
             System.out.println("The registry is empty.");
-        }
-        else {
+        } else {
             System.out.println("Here is a list of all the books in the bookregistry");
             System.out.println("----------------------------------");
             while (bookIterator.hasNext()) {
@@ -161,10 +173,9 @@ class BookLibraryApp {
 
     private void listAllBooksSimple() {
         Iterator<Book> bookIterator = bookRegister.getIterator();
-        if(!bookIterator.hasNext()) {
+        if (!bookIterator.hasNext()) {
             System.out.println("The registry is empty.");
-        }
-        else {
+        } else {
             System.out.println("Here is a list of all the books in the bookregistry");
             int index = 0;
             while (bookIterator.hasNext()) {
@@ -187,12 +198,12 @@ class BookLibraryApp {
             } catch (Exception e) {
                 System.out.println("This is not a valid number, please input a number");
             }
-        } while(!done);
+        } while (!done);
         return input;
     }
 
     public static void main(String[] args) {
-       BookLibraryApp bookLibrary = new BookLibraryApp();
-       bookLibrary.init();
+        BookLibraryApp bookLibrary = new BookLibraryApp();
+        bookLibrary.init();
     }
 }
