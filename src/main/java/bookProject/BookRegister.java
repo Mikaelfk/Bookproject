@@ -8,12 +8,16 @@ import java.util.Scanner;
 class BookRegister {
 
     private final ArrayList<Book> bookList;
-    private HashMap<String, Book> bookHashMap;
+    private HashMap<String, Book> bookEANHashMap;
+    private HashMap<String, Book> bookTitleHashMap;
+    private HashMap<String, ArrayList<Book>> bookAuthorHashMap;
 
     //Constructor
     BookRegister(){
         bookList = new ArrayList<>();
-        bookHashMap = new HashMap<>();
+        bookEANHashMap = new HashMap<>();
+        bookTitleHashMap = new HashMap<>();
+        bookAuthorHashMap = new HashMap<>();
     }
 
     //Adds 4 test books to the library
@@ -26,17 +30,17 @@ class BookRegister {
         bookList.add(book2);
         bookList.add(book3);
         bookList.add(book4);
-        bookHashMap.put("1234567890123", book1);
-        bookHashMap.put("1234567890124", book2);
-        bookHashMap.put("1234567890125", book3);
-        bookHashMap.put("1234567890126", book4);
+        bookEANHashMap.put("1234567890123", book1);
+        bookEANHashMap.put("1234567890124", book2);
+        bookEANHashMap.put("1234567890125", book3);
+        bookEANHashMap.put("1234567890126", book4);
     }
 
     //method which adds a book to the library
     void addBook(String title, String author, String publisher, int yearReleased, int pages, String EAN, boolean loaned) {
         Book book = new Book(title, author, publisher, yearReleased, pages, EAN, loaned);
         bookList.add(book);
-        bookHashMap.put(EAN, book);
+        bookEANHashMap.put(EAN, book);
     }
 
     Book searchBookTitle(String searchBook) {
@@ -63,7 +67,7 @@ class BookRegister {
     }
 
     Book searchBookEAN(String ean) {
-        Iterator bookIterator = bookHashMap.entrySet().iterator();
+        Iterator bookIterator = bookEANHashMap.entrySet().iterator();
         while(bookIterator.hasNext()) {
             Map.Entry mapElement = (Map.Entry)bookIterator.next();
             if(mapElement.getKey().equals(ean)) {
@@ -88,7 +92,7 @@ class BookRegister {
                 String ans = sc.next().toLowerCase();
                 if(ans.equals("yes")) {
                     System.out.println("You have deleted " + bookList.get(i).getBookTitle() + " From the bookregistry");
-                    bookHashMap.remove(bookList.get(i).getBookEAN());
+                    bookEANHashMap.remove(bookList.get(i).getBookEAN());
                     bookList.remove(i);
                     i--;
                 }
