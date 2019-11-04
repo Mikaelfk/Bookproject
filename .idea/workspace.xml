@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0e1128c6-2123-4d4e-b150-8d650d5f57d6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/production/Prosjektoppgave/bookProject/.vscode/launch.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/production/Prosjektoppgave/bookProject/BookRegister.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/production/Prosjektoppgave/bookProject/BookRegister.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bookProject/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bookProject/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bookProject/BookLibraryApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bookProject/BookLibraryApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/bookProject/BookRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bookProject/BookRegister.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -183,6 +179,7 @@
       <workItem from="1572750186457" duration="618000" />
       <workItem from="1572750997841" duration="1871000" />
       <workItem from="1572799998615" duration="520000" />
+      <workItem from="1572854776271" duration="306000" />
     </task>
     <task id="LOCAL−00001" summary="hei">
       <created>1570028730097</created>
