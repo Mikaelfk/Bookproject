@@ -1,5 +1,3 @@
-package bookProject;
-
 class Book {
 
     //Fields:

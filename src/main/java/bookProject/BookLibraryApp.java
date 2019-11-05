@@ -1,5 +1,3 @@
-package bookProject;
-
 import java.util.Iterator;
 import java.util.Scanner;
 
@@ -48,6 +46,7 @@ class BookLibraryApp {
                     listAllBooksSimple();
                     break;
                 case "quit":
+                    System.out.println("Exiting application");
                     finished = true;
                     break;
                 default:
