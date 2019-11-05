@@ -10,7 +10,7 @@ class Book {
     private final int bookPages;
     private final String bookEAN;
     private final boolean bookLoaned;
-    
+
     //Constructor:
     Book(String name, String author, String publisher, int yearReleased, int pages, String EAN, boolean loaned) {
         this.bookTitle = name;
@@ -24,19 +24,18 @@ class Book {
     //Methods:
 
     void printBook() {
-            System.out.println("Title: "+ this.getBookTitle());
-            System.out.println("Author: "+ this.getBookAuthor());
-            System.out.println("Publisher: "+ this.getBookPublisher());
-            System.out.println("Release year: "+ this.getBookYearReleased());
-            System.out.println("Pages: "+ this.getBookPages());
-            System.out.println("EAN code: "+ this.getBookEAN());
-            if (this.getBookLoaned()){
-                System.out.println("The book is currently not available");
-            }
-            else {
-                System.out.println("The book is currently available");
-            }
-            System.out.println("----------------------------------");
+        System.out.println("Title: " + this.getBookTitle());
+        System.out.println("Author: " + this.getBookAuthor());
+        System.out.println("Publisher: " + this.getBookPublisher());
+        System.out.println("Release year: " + this.getBookYearReleased());
+        System.out.println("Pages: " + this.getBookPages());
+        System.out.println("EAN code: " + this.getBookEAN());
+        if (this.getBookLoaned()) {
+            System.out.println("The book is currently not available");
+        } else {
+            System.out.println("The book is currently available");
+        }
+        System.out.println("----------------------------------");
 
     }
 

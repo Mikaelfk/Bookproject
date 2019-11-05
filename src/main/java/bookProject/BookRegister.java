@@ -1,4 +1,5 @@
 package bookProject;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -69,7 +70,7 @@ class BookRegister {
         Iterator<Book> bookIterator = this.getIterator();
         while (bookIterator.hasNext()) {
             Book book = bookIterator.next();
-            if(book.getBookTitle().toLowerCase().equals(deleteBook.toLowerCase())
+            if (book.getBookTitle().toLowerCase().equals(deleteBook.toLowerCase())
                     || book.getBookAuthor().toLowerCase().equals(deleteBook.toLowerCase())
                     || book.getBookEAN().equals(deleteBook)) {
                 found = true;

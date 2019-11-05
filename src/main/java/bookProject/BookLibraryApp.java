@@ -1,4 +1,5 @@
 package bookProject;
+
 import java.util.Iterator;
 import java.util.Scanner;
 
@@ -20,7 +21,7 @@ class BookLibraryApp {
             scanner = new Scanner(System.in);
             //removes all spaces in the command
             String command = scanner.nextLine().toLowerCase();
-            command = command.replaceAll("\\s","");
+            command = command.replaceAll("\\s", "");
 
             switch (command) {
                 case "help":
@@ -118,15 +119,14 @@ class BookLibraryApp {
         System.out.println("Type the EAN number of the book you wish to add");
         String EAN = scanner.nextLine();
         boolean done = false;
-        while(!done) {
+        while (!done) {
             if (bookRegister.searchBookEAN(EAN) != null) {
                 System.out.println("A book with this EAN number already exists, please enter a different EAN number");
                 EAN = scanner.nextLine();
                 if (bookRegister.searchBookEAN(EAN) == null) {
                     done = true;
                 }
-            }
-            else {
+            } else {
                 done = true;
             }
         }
@@ -173,7 +173,7 @@ class BookLibraryApp {
     }
 
 
-   private void listAllBooksSimple() {
+    private void listAllBooksSimple() {
         Iterator<Book> bookIterator = bookRegister.getIterator();
         if (!bookIterator.hasNext()) {
             System.out.println("The registry is empty.");
