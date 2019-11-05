@@ -41,10 +41,10 @@ class BookLibraryApp {
                 case "remove":
                     removeBook();
                     break;
-                case "list":
+                case "listdetailed":
                     listAllBooks();
                     break;
-                case "listsimple":
+                case "list":
                     listAllBooksSimple();
                     break;
                 case "quit":
@@ -59,7 +59,7 @@ class BookLibraryApp {
     //method which prints out available commands
     private void printHelp() {
         System.out.println("Available commands:");
-        System.out.println("Help, Search Title, Search Author, Search EAN, Add, Remove, List, List Simple, Quit");
+        System.out.println("Help, Search Title, Search Author, Search EAN, Add, Remove, List, List Detailed, Quit");
     }
 
     //method which searches by title
@@ -140,18 +140,17 @@ class BookLibraryApp {
         boolean answered = false;
         while (!answered) {
             String rented = scanner.nextLine().toLowerCase();
-            if (rented.equals("yes")) {
+            if (rented.contains("yes")) {
                 answered = true;
                 loaned = true;
-            } else if (rented.equals("no")) {
+            } else if (rented.contains("no")) {
                 answered = true;
             } else {
                 System.out.println("Please type in 'yes' or 'no'");
             }
-
-            System.out.println("The book has been added to the registry");
-            bookRegister.addBook(title, author, publisher, yearReleased, pages, EAN, loaned);
         }
+        System.out.println("The book has been added to the registry");
+        bookRegister.addBook(title, author, publisher, yearReleased, pages, EAN, loaned);
     }
 
     //method which removes a book

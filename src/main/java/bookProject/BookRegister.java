@@ -97,7 +97,6 @@ class BookRegister {
         }
     }
 
-
     Iterator<Book> getIterator() {
         return this.bookEANHashMap.values().iterator();
     }
