@@ -66,11 +66,13 @@ class BookLibraryApp {
     private void searchTitle() {
         System.out.println("Type the title of the book you are searching for");
         String book = scanner.nextLine();
-        if (bookRegister.searchBookTitle(book) == null) {
+        if (bookRegister.searchBookTitle(book).size() == 0) {
             System.out.println("There is no book in the registry with this title");
         } else {
             System.out.println("----------------------------------");
-            bookRegister.searchBookTitle(book).printBook();
+            for (int i = 0; i < bookRegister.searchBookTitle(book).size(); i++) {
+                bookRegister.searchBookTitle(book).get(i).printBook();
+            }
         }
     }
 
@@ -164,12 +166,14 @@ class BookLibraryApp {
             System.out.println("Here is a list of all the books in the bookregistry");
             System.out.println("----------------------------------");
             while (bookIterator.hasNext()) {
-                bookIterator.next().printBook();
+                Book book = bookIterator.next();
+                book.printBook();
             }
         }
     }
 
-    private void listAllBooksSimple() {
+
+   private void listAllBooksSimple() {
         Iterator<Book> bookIterator = bookRegister.getIterator();
         if (!bookIterator.hasNext()) {
             System.out.println("The registry is empty.");
@@ -183,6 +187,7 @@ class BookLibraryApp {
             }
         }
     }
+
 
     //method that checks if input is a valid integer.
     private int checkInt() {
