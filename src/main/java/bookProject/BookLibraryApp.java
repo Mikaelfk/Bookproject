@@ -16,7 +16,6 @@ class BookLibraryApp {
         System.out.println("Type 'help' for list of commands");
         boolean finished = false;
         while (!finished) {
-            System.out.println("Type a command");
             System.out.print("> ");
             scanner = new Scanner(System.in);
             //removes all spaces in the command
@@ -60,7 +59,7 @@ class BookLibraryApp {
     //method which prints out available commands
     private void printHelp() {
         System.out.println("Available commands:");
-        System.out.println("help, Search Title, Search Author, Search EAN, add, remove, list, list simple, quit");
+        System.out.println("Help, Search Title, Search Author, Search EAN, Add, Remove, List, List Simple, Quit");
     }
 
     //method which searches by title
@@ -82,7 +81,7 @@ class BookLibraryApp {
         System.out.println("Type the author of the book or books you are searching for");
         String author = scanner.nextLine().toLowerCase();
         if (bookRegister.searchBookAuthor(author).size() == 0) {
-            System.out.println("There is no book in the register written by this author");
+            System.out.println("There is no book in the registry written by this author");
         } else {
             System.out.println("----------------------------------");
             for (int i = 0; i < bookRegister.searchBookAuthor(author).size(); i++) {
@@ -116,18 +115,24 @@ class BookLibraryApp {
         int yearReleased = checkInt();
         System.out.println("Type in the amount of pages in the book");
         int pages = checkInt();
-        System.out.println("Type the EAN number of the book you wish to add");
-        String EAN = scanner.nextLine();
+        System.out.println("Type the EAN number of the book you wish to add, it must be 13 characters long," +
+                " and consist of only numbers");
+        String EAN = "";
         boolean done = false;
         while (!done) {
-            if (bookRegister.searchBookEAN(EAN) != null) {
-                System.out.println("A book with this EAN number already exists, please enter a different EAN number");
+            try {
                 EAN = scanner.nextLine();
-                if (bookRegister.searchBookEAN(EAN) == null) {
+                Double.parseDouble(EAN);
+                if (EAN.length() != 13) {
+                    System.out.println("This is not a valid EAN number");
+                } else if (bookRegister.searchBookEAN(EAN) == null) {
                     done = true;
+                } else {
+                    System.out.println("A book with this EAN number already exists, please enter a different EAN number");
                 }
-            } else {
-                done = true;
+            }
+            catch (Exception e) {
+                System.out.println("This is not a valid EAN number");
             }
         }
         System.out.println("Is the book rented, type 'yes' or 'no'");
