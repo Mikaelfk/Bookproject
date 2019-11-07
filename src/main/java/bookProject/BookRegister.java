@@ -4,7 +4,11 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Scanner;
 
-class BookRegister {
+/**
+ * A class for the registry.
+ * @author Mikael Falkenberg Krog
+ */
+public class BookRegister {
 
     private final HashMap<String, Book> bookEANHashMap;
 
@@ -14,6 +18,10 @@ class BookRegister {
     }
 
     //Adds 4 test books to the library
+
+    /**
+     * Method which adds 4 test books.
+     */
     void addTestBooks() {
         bookEANHashMap.put("1234567890123", new Book("Title1", "Author1", "Publisher1",
                 2019, 500, "1234567890123", false));
@@ -26,12 +34,26 @@ class BookRegister {
     }
 
 
-    //method which adds a book to the library
+    /**
+     * Method which adds a book
+     * @param title Book title
+     * @param author Book author
+     * @param publisher Book publisher
+     * @param yearReleased Year book was published
+     * @param pages Pages in book
+     * @param EAN EAN number of book
+     * @param loaned Status of book.
+     */
     void addBook(String title, String author, String publisher, int yearReleased, int pages, String EAN, boolean loaned) {
         Book book = new Book(title, author, publisher, yearReleased, pages, EAN, loaned);
         bookEANHashMap.put(EAN, book);
     }
 
+    /**
+     * Method which searches based on the title of a book.
+     * @param searchBook Title of book the user wishes to search for
+     * @return All the books with the title in an ArrayList
+     */
     ArrayList<Book> searchBookTitle(String searchBook) {
         ArrayList<Book> foundBooks = new ArrayList<>();
         Iterator<Book> bookIterator = this.getIterator();
@@ -44,6 +66,11 @@ class BookRegister {
         return foundBooks;
     }
 
+    /**
+     * Method which searches based on the author of a book.
+     * @param searchAuthor Author of the book the user wishes to search for
+     * @return All the books with the author in an ArrayList.
+     */
     ArrayList<Book> searchBookAuthor(String searchAuthor) {
         ArrayList<Book> foundBooks = new ArrayList<>();
         Iterator<Book> bookIterator = this.getIterator();
@@ -57,16 +84,18 @@ class BookRegister {
 
     }
 
+    /**
+     * Method which returns the book with a certain EAN number.
+     * @param ean EAN number of the book the user wishes to search for
+     * @return The book with the given EAN number.
+     */
     Book searchBookEAN(String ean) {
-        for (Map.Entry<String, Book> bookEntry : bookEANHashMap.entrySet()) {
-            if (bookEntry.getKey().equals(ean)) {
-                return bookEntry.getValue();
-            }
-        }
-        return null;
+        return bookEANHashMap.get(ean);
     }
 
-    //Method to delete a book
+    /**
+     * Method to delete a book
+     */
     void deleteBook(String deleteBook) {
         boolean found = false;
         Scanner sc = new Scanner(System.in);
@@ -95,6 +124,10 @@ class BookRegister {
         }
     }
 
+    /**
+     * Method which gets an iterator.
+     * @return An iterator for the HashMap values of bookEANHashMap.
+     */
     Iterator<Book> getIterator() {
         return this.bookEANHashMap.values().iterator();
     }

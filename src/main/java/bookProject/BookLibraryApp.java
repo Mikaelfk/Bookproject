@@ -1,11 +1,18 @@
 import java.util.Iterator;
 import java.util.Scanner;
 
-class BookLibraryApp {
+/**
+ * A class which allows user interaction with the registry.
+ * @author Mikael Falkenberg Krog
+ */
+public class BookLibraryApp {
 
     private BookRegister bookRegister;
     private Scanner scanner;
 
+    /**
+     * Method which initialises the application
+     */
     private void init() {
         bookRegister = new BookRegister();
         bookRegister.addTestBooks();
@@ -55,13 +62,19 @@ class BookLibraryApp {
         }
     }
 
-    //method which prints out available commands
+    /**
+     * Method which prints out available commands.
+     */
+
     private void printHelp() {
         System.out.println("Available commands:");
         System.out.println("Help, Search Title, Search Author, Search EAN, Add, Remove, List, List Detailed, Quit");
     }
 
-    //method which searches by title
+    /**
+     * Method which searches by title.
+     */
+
     private void searchTitle() {
         System.out.println("Type the title of the book you are searching for");
         String book = scanner.nextLine();
@@ -75,7 +88,10 @@ class BookLibraryApp {
         }
     }
 
-    //method which searches by author
+    /**
+     * Method which searches by author.
+     */
+
     private void searchAuthor() {
         System.out.println("Type the author of the book or books you are searching for");
         String author = scanner.nextLine().toLowerCase();
@@ -89,7 +105,10 @@ class BookLibraryApp {
         }
     }
 
-    //method which searches by EAN number
+    /**
+     * Method which searches by EAN number.
+     */
+
     private void searchEAN() {
         System.out.println("Type the EAN number of the book you are searching for");
         String EAN = scanner.nextLine().toLowerCase();
@@ -101,7 +120,9 @@ class BookLibraryApp {
         }
     }
 
-    //method which adds a book
+    /**
+     * Method which adds a book.
+     */
 
     private void addBook() {
         System.out.println("Type the title of the book you wish to add");
@@ -123,7 +144,7 @@ class BookLibraryApp {
                 EAN = scanner.nextLine();
                 Double.parseDouble(EAN);
                 if (EAN.length() != 13) {
-                    System.out.println("This is not a valid EAN number");
+                    System.out.println("EAN numbers must contain 13 numbers");
                 } else if (bookRegister.searchBookEAN(EAN) == null) {
                     done = true;
                 } else {
@@ -152,7 +173,9 @@ class BookLibraryApp {
         bookRegister.addBook(title, author, publisher, yearReleased, pages, EAN, loaned);
     }
 
-    //method which removes a book
+    /**
+     * Method which removes a book.
+     */
     private void removeBook() {
         System.out.println("Type in the title, author, or EAN number of the book you wish to delete");
         String search = scanner.nextLine();
@@ -160,7 +183,10 @@ class BookLibraryApp {
         bookRegister.deleteBook(search);
     }
 
-    //method which prints all the books
+    /**
+     * Method which prints all the books.
+     */
+
     private void listAllBooks() {
         Iterator<Book> bookIterator = bookRegister.getIterator();
         if (!bookIterator.hasNext()) {
@@ -175,7 +201,9 @@ class BookLibraryApp {
         }
     }
 
-
+    /**
+     * Method which lists all the books in the registry with minimal information.
+     */
     private void listAllBooksSimple() {
         Iterator<Book> bookIterator = bookRegister.getIterator();
         if (!bookIterator.hasNext()) {
@@ -192,7 +220,9 @@ class BookLibraryApp {
     }
 
 
-    //method that checks if input is a valid integer.
+    /**
+     * Method that checks if input is a valid integer.
+     */
     private int checkInt() {
         boolean done = false;
         int input = 0;
