@@ -150,7 +150,18 @@ public class BookLibraryApp {
         }
 
         System.out.println("Type in the amount of pages in the book");
-        int pages = checkInt();
+        int pages = 0;
+        done = false;
+        while(!done) {
+            pages = checkInt();
+            if (pages < 3) {
+                System.out.println("The book must contain more than 2 pages");
+                System.out.println("Please type in amount of pages again");
+            }
+            else {
+                done = true;
+            }
+        }
 
         System.out.println("Type the EAN number of the book you wish to add, it must be 13 characters long," +
                 " and consist of only numbers");
