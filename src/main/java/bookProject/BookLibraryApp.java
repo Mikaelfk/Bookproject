@@ -1,3 +1,4 @@
+import java.util.Calendar;
 import java.util.Iterator;
 import java.util.Scanner;
 
@@ -131,14 +132,25 @@ public class BookLibraryApp {
         String author = scanner.nextLine();
         System.out.println("Type in the publisher of the book you wish to add");
         String publisher = scanner.nextLine();
-        System.out.println("Type in the year the book was released");
-        int yearReleased = checkInt();
+        System.out.println("Type in the year the book was Published");
+        int yearReleased = 0;
+        boolean done = false;
+        while(!done) {
+            yearReleased = checkInt();
+            if (yearReleased > Calendar.getInstance().get(Calendar.YEAR)) {
+                System.out.println("The book cannot be published in the future");
+                System.out.println("Please type in a valid year");
+            }
+            else {
+                done = true;
+            }
+        }
         System.out.println("Type in the amount of pages in the book");
         int pages = checkInt();
         System.out.println("Type the EAN number of the book you wish to add, it must be 13 characters long," +
                 " and consist of only numbers");
         String EAN = "";
-        boolean done = false;
+        done = false;
         while (!done) {
             try {
                 EAN = scanner.nextLine();
@@ -157,14 +169,14 @@ public class BookLibraryApp {
         }
         System.out.println("Is the book rented, type 'yes' or 'no'");
         boolean loaned = false;
-        boolean answered = false;
-        while (!answered) {
+        done = false;
+        while (!done) {
             String rented = scanner.nextLine().toLowerCase();
             if (rented.contains("yes")) {
-                answered = true;
+                done = true;
                 loaned = true;
             } else if (rented.contains("no")) {
-                answered = true;
+                done = true;
             } else {
                 System.out.println("Please type in 'yes' or 'no'");
             }
