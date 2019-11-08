@@ -128,10 +128,13 @@ public class BookLibraryApp {
     private void addBook() {
         System.out.println("Type the title of the book you wish to add");
         String title = scanner.nextLine();
+
         System.out.println("Type the author of the book you wish to add");
         String author = scanner.nextLine();
+
         System.out.println("Type in the publisher of the book you wish to add");
         String publisher = scanner.nextLine();
+
         System.out.println("Type in the year the book was Published");
         int yearReleased = 0;
         boolean done = false;
@@ -145,8 +148,10 @@ public class BookLibraryApp {
                 done = true;
             }
         }
+
         System.out.println("Type in the amount of pages in the book");
         int pages = checkInt();
+
         System.out.println("Type the EAN number of the book you wish to add, it must be 13 characters long," +
                 " and consist of only numbers");
         String EAN = "";
@@ -167,6 +172,7 @@ public class BookLibraryApp {
                 System.out.println("This is not a valid EAN number");
             }
         }
+
         System.out.println("Is the book rented, type 'yes' or 'no'");
         boolean loaned = false;
         done = false;
@@ -182,6 +188,7 @@ public class BookLibraryApp {
             }
         }
         System.out.println("The book has been added to the registry");
+
         bookRegister.addBook(title, author, publisher, yearReleased, pages, EAN, loaned);
     }
 
