@@ -1,5 +1,6 @@
 /**
  * A class for books.
+ *
  * @author Mikael Falkenberg Krog
  */
 public class Book {
@@ -14,13 +15,14 @@ public class Book {
 
     /**
      * Constructor for the book class.
-     * @param name Title of book
-     * @param author Author of book
-     * @param publisher Publisher of book
+     *
+     * @param name         Title of book
+     * @param author       Author of book
+     * @param publisher    Publisher of book
      * @param yearReleased Year the book was released
-     * @param pages Pages in book
-     * @param EAN The book's EAN number
-     * @param loaned The status of the book
+     * @param pages        Pages in book
+     * @param EAN          The book's EAN number
+     * @param loaned       The status of the book
      */
     Book(String name, String author, String publisher, int yearReleased, int pages, String EAN, boolean loaned) {
         this.bookTitle = name;
@@ -56,11 +58,12 @@ public class Book {
      */
     void printBookSimple() {
         System.out.println("Title: " + this.getBookTitle() + " | Author: " + this.getBookAuthor() +
-                 " | EAN number: " + this.getBookEAN() + " | Rented: " + this.getBookLoaned());
+                " | EAN number: " + this.getBookEAN() + " | Rented: " + this.getBookLoaned());
     }
 
     /**
      * Method which gets the title of a book.
+     *
      * @return Title
      */
     String getBookTitle() {
@@ -69,6 +72,7 @@ public class Book {
 
     /**
      * Method which gets the author of a book.
+     *
      * @return Author
      */
     String getBookAuthor() {
@@ -77,6 +81,7 @@ public class Book {
 
     /**
      * Method which gets the publisher of a book.
+     *
      * @return Publisher
      */
     private String getBookPublisher() {
@@ -85,6 +90,7 @@ public class Book {
 
     /**
      * Method which gets the release year of a book.
+     *
      * @return Year released
      */
     private int getBookYearReleased() {
@@ -93,6 +99,7 @@ public class Book {
 
     /**
      * Method which gets the amount of pages in a book.
+     *
      * @return Pages
      */
     private int getBookPages() {
@@ -101,6 +108,7 @@ public class Book {
 
     /**
      * Method which gets the EAN number of a book.
+     *
      * @return EAN number as string.
      */
     String getBookEAN() {
@@ -109,6 +117,7 @@ public class Book {
 
     /**
      * Method which gets the status of the book
+     *
      * @return Rented as boolean value
      */
     private boolean getBookLoaned() {

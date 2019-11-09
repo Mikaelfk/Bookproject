@@ -101,8 +101,6 @@ public class BookRegister {
      * @return An ArrayList with all the matching books
      */
     ArrayList<Book> searchBookPrint(String searchBook) {
-        boolean found = false;
-        Scanner sc = new Scanner(System.in);
         Iterator<Book> bookIterator = this.getIterator();
         ArrayList<Book> foundBooks = new ArrayList<>();
         while (bookIterator.hasNext()) {
@@ -111,15 +109,11 @@ public class BookRegister {
                     || book.getBookAuthor().toLowerCase().equals(searchBook.toLowerCase())
                     || book.getBookEAN().equals(searchBook)) {
                 foundBooks.add(book);
-                found = true;
             }
         }
         for (int i = 0; i < foundBooks.size(); i++) {
             System.out.print(i + 1 + ": ");
             foundBooks.get(i).printBookSimple();
-        }
-        if (!found) {
-            System.out.println("This book does not exist");
         }
         return foundBooks;
     }
@@ -133,9 +127,10 @@ public class BookRegister {
         Scanner sc = new Scanner(System.in);
         for (int i = 0; i < array.size(); i++) {
             if (i == (number - 1)) {
+                System.out.println("----------------------------------");
                 array.get(i).printBook();
                 System.out.println("Is this the book you want to remove? Type 'yes' if you wish to remove this book. " +
-                        "Type 'no' if you dont wish to remove this book");
+                        "Type 'no' if you don't wish to remove this book");
                 String command = sc.nextLine().toLowerCase().trim();
                 if (command.equals("yes")) {
                     bookEANHashMap.remove(array.get(i).getBookEAN());
