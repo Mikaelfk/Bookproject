@@ -17,8 +17,6 @@ public class BookRegister {
         bookEANHashMap = new HashMap<>();
     }
 
-    //Adds 4 test books to the library
-
     /**
      * Method which adds 4 test books.
      */
@@ -98,9 +96,9 @@ public class BookRegister {
     }
 
     /**
-     *
-     * @param searchBook
-     * @return
+     * This method returns an ArrayList, and also prints it. This is used for the delete function
+     * @param searchBook The input the user wanted to search for
+     * @return An ArrayList with all the matching books
      */
     ArrayList<Book> searchBookPrint(String searchBook) {
         boolean found = false;
@@ -116,7 +114,7 @@ public class BookRegister {
                 found = true;
             }
         }
-        for(int i = 0; i < foundBooks.size(); i++) {
+        for (int i = 0; i < foundBooks.size(); i++) {
             System.out.print(i + 1 + ": ");
             foundBooks.get(i).printBookSimple();
         }
@@ -127,23 +125,22 @@ public class BookRegister {
     }
 
     /**
-     *
-     * @param array
-     * @param number
+     * Method used to delete a book from the registry.
+     * @param array The ArrayList found by the method searchBookPrint
+     * @param number The number of the book the user wants to delete
      */
     void deleteBook(ArrayList<Book> array, int number) {
         Scanner sc = new Scanner(System.in);
-        for(int i = 0; i < array.size(); i++) {
-            if(i == (number-1)) {
+        for (int i = 0; i < array.size(); i++) {
+            if (i == (number - 1)) {
                 array.get(i).printBook();
                 System.out.println("Is this the book you want to remove? Type 'yes' if you wish to remove this book. " +
                         "Type 'no' if you dont wish to remove this book");
                 String command = sc.nextLine().toLowerCase().trim();
-                if(command.equals("yes")) {
+                if (command.equals("yes")) {
                     bookEANHashMap.remove(array.get(i).getBookEAN());
                     System.out.println("The book has been removed from the registry");
-                }
-                else {
+                } else {
                     System.out.println("The book has not been removed");
                 }
             }
@@ -152,6 +149,7 @@ public class BookRegister {
 
     /**
      * Method which gets an iterator.
+     *
      * @return An iterator for the HashMap values of bookEANHashMap.
      */
     Iterator<Book> getIterator() {

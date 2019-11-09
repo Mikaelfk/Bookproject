@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 /**
  * A class which allows user interaction with the registry.
+ *
  * @author Mikael Falkenberg Krog
  */
 public class BookLibraryApp {
@@ -18,7 +19,7 @@ public class BookLibraryApp {
     private void init() {
         bookRegister = new BookRegister();
         bookRegister.addTestBooks();
-        System.out.println("Welcome to this book register.");
+        System.out.println("Welcome to this book registry.");
         System.out.println("You can search for books, add books and remove books");
         System.out.println("Type 'help' for list of commands");
         boolean finished = false;
@@ -74,7 +75,7 @@ public class BookLibraryApp {
     }
 
     /**
-     * Method which searches by title.
+     * Method which searches by title specified by the user.
      */
 
     private void searchTitle() {
@@ -91,7 +92,7 @@ public class BookLibraryApp {
     }
 
     /**
-     * Method which searches by author.
+     * Method which searches by author specified by the user.
      */
 
     private void searchAuthor() {
@@ -108,7 +109,7 @@ public class BookLibraryApp {
     }
 
     /**
-     * Method which searches by EAN number.
+     * Method which searches by EAN number specified by the user.
      */
 
     private void searchEAN() {
@@ -123,9 +124,8 @@ public class BookLibraryApp {
     }
 
     /**
-     * Method which adds a book.
+     * Method which adds a book. Asks the user for each input needed.
      */
-
     private void addBook() {
         System.out.println("Type the title of the book you wish to add");
         String title = scanner.nextLine();
@@ -139,13 +139,12 @@ public class BookLibraryApp {
         System.out.println("Type in the year the book was Published");
         int yearReleased = 0;
         boolean done = false;
-        while(!done) {
+        while (!done) {
             yearReleased = checkInt();
             if (yearReleased > Calendar.getInstance().get(Calendar.YEAR)) {
                 System.out.println("The book cannot be published in the future");
                 System.out.println("Please type in a valid year");
-            }
-            else {
+            } else {
                 done = true;
             }
         }
@@ -153,13 +152,12 @@ public class BookLibraryApp {
         System.out.println("Type in the amount of pages in the book");
         int pages = 0;
         done = false;
-        while(!done) {
+        while (!done) {
             pages = checkInt();
             if (pages < 3) {
                 System.out.println("The book must contain more than 2 pages");
                 System.out.println("Please type in amount of pages again");
-            }
-            else {
+            } else {
                 done = true;
             }
         }
@@ -179,8 +177,7 @@ public class BookLibraryApp {
                 } else {
                     System.out.println("A book with this EAN number already exists, please enter a different EAN number");
                 }
-            }
-            catch (Exception e) {
+            } catch (Exception e) {
                 System.out.println("This is not a valid EAN number");
             }
         }
@@ -221,7 +218,6 @@ public class BookLibraryApp {
     /**
      * Method which prints all the books.
      */
-
     private void listAllBooks() {
         Iterator<Book> bookIterator = bookRegister.getIterator();
         if (!bookIterator.hasNext()) {
