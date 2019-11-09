@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Iterator;
 import java.util.Scanner;
@@ -209,8 +210,12 @@ public class BookLibraryApp {
     private void removeBook() {
         System.out.println("Type in the title, author, or EAN number of the book you wish to delete");
         String search = scanner.nextLine();
-        System.out.println("----------------------------------");
-        bookRegister.deleteBook(search);
+        System.out.println("---------------------------------------------------------------------------------------");
+        ArrayList<Book> foundBooks = bookRegister.searchBookPrint(search);
+        System.out.println("---------------------------------------------------------------------------------------");
+        System.out.println("Choose which book you want to delete by typing in its number.");
+        int number = scanner.nextInt();
+        bookRegister.deleteBook(foundBooks, number);
     }
 
     /**
@@ -240,10 +245,12 @@ public class BookLibraryApp {
             System.out.println("The registry is empty.");
         } else {
             System.out.println("Here is a list of all the books in the bookregistry");
+            System.out.println("---------------------------------------------------------------------------------------");
             while (bookIterator.hasNext()) {
                 Book book = bookIterator.next();
                 book.printBookSimple();
             }
+            System.out.println("---------------------------------------------------------------------------------------");
         }
     }
 

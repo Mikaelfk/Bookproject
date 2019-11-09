@@ -98,48 +98,60 @@ public class BookRegister {
     }
 
     /**
-     * Method to delete a book
+     *
+     * @param searchBook
+     * @return
      */
-    void deleteBook(String deleteBook) {
+    ArrayList<Book> searchBookPrint(String searchBook) {
         boolean found = false;
         Scanner sc = new Scanner(System.in);
         Iterator<Book> bookIterator = this.getIterator();
         ArrayList<Book> foundBooks = new ArrayList<>();
         while (bookIterator.hasNext()) {
             Book book = bookIterator.next();
-            if (book.getBookTitle().toLowerCase().equals(deleteBook.toLowerCase())
-                    || book.getBookAuthor().toLowerCase().equals(deleteBook.toLowerCase())
-                    || book.getBookEAN().equals(deleteBook)) {
+            if (book.getBookTitle().toLowerCase().equals(searchBook.toLowerCase())
+                    || book.getBookAuthor().toLowerCase().equals(searchBook.toLowerCase())
+                    || book.getBookEAN().equals(searchBook)) {
                 foundBooks.add(book);
                 found = true;
-                /*
-                book.printBookSimple();
-                System.out.println("Type 'yes' if this is the book you wish to remove, " +
-                       "type 'no' if you do not wish to remove this book");
-                String ans = sc.next().toLowerCase();
-                if (ans.equals("yes")) {
-                    System.out.println("You have deleted " + book.getBookTitle() + " From the bookregistry");
-                    bookIterator.remove();
-                    bookEANHashMap.remove(book.getBookEAN());
-                } else {
-                    System.out.println("You have not deleted the book");
-                }
-
-                 */
             }
         }
         for(int i = 0; i < foundBooks.size(); i++) {
+            System.out.print(i + 1 + ": ");
             foundBooks.get(i).printBookSimple();
         }
-
         if (!found) {
             System.out.println("This book does not exist");
+        }
+        return foundBooks;
+    }
+
+    /**
+     *
+     * @param array
+     * @param number
+     */
+    void deleteBook(ArrayList<Book> array, int number) {
+        Scanner sc = new Scanner(System.in);
+        for(int i = 0; i < array.size(); i++) {
+            if(i == (number-1)) {
+                array.get(i).printBook();
+                System.out.println("Is this the book you want to remove? Type 'yes' if you wish to remove this book. " +
+                        "Type 'no' if you dont wish to remove this book");
+                String command = sc.nextLine().toLowerCase().trim();
+                if(command.equals("yes")) {
+                    bookEANHashMap.remove(array.get(i).getBookEAN());
+                    System.out.println("The book has been removed from the registry");
+                }
+                else {
+                    System.out.println("The book has not been removed");
+                }
+            }
         }
     }
 
     /**
      * Method which gets an iterator.
-     *
      * @return An iterator for the HashMap values of bookEANHashMap.
      */
     Iterator<Book> getIterator() {
