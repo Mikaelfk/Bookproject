@@ -240,11 +240,9 @@ public class BookLibraryApp {
             System.out.println("The registry is empty.");
         } else {
             System.out.println("Here is a list of all the books in the bookregistry");
-            int index = 0;
             while (bookIterator.hasNext()) {
-                index++;
-                System.out.print(index + ": ");
-                bookIterator.next().printBookSimple();
+                Book book = bookIterator.next();
+                book.printBookSimple();
             }
         }
     }

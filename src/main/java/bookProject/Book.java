@@ -55,7 +55,8 @@ public class Book {
      * Method which prints the book with minimal information.
      */
     void printBookSimple() {
-        System.out.println("Title: " + this.getBookTitle() + " | Author: " + this.getBookAuthor() + " | Publisher: " + this.getBookPublisher() + " | Year published: " + this.getBookYearReleased());
+        System.out.println("Title: " + this.getBookTitle() + " | Author: " + this.getBookAuthor() +
+                 " | EAN number: " + this.getBookEAN() + " | Rented: " + this.getBookLoaned());
     }
 
     /**

@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 /**
  * A class for the registry.
+ *
  * @author Mikael Falkenberg Krog
  */
 public class BookRegister {
@@ -35,13 +36,14 @@ public class BookRegister {
 
     /**
      * Method which adds a book
-     * @param title Book title
-     * @param author Book author
-     * @param publisher Book publisher
+     *
+     * @param title        Book title
+     * @param author       Book author
+     * @param publisher    Book publisher
      * @param yearReleased Year book was published
-     * @param pages Pages in book
-     * @param EAN EAN number of book
-     * @param loaned Status of book.
+     * @param pages        Pages in book
+     * @param EAN          EAN number of book
+     * @param loaned       Status of book.
      */
     void addBook(String title, String author, String publisher, int yearReleased, int pages, String EAN, boolean loaned) {
         Book book = new Book(title, author, publisher, yearReleased, pages, EAN, loaned);
@@ -50,6 +52,7 @@ public class BookRegister {
 
     /**
      * Method which searches based on the title of a book.
+     *
      * @param searchBook Title of book the user wishes to search for
      * @return All the books with the title in an ArrayList
      */
@@ -67,6 +70,7 @@ public class BookRegister {
 
     /**
      * Method which searches based on the author of a book.
+     *
      * @param searchAuthor Author of the book the user wishes to search for
      * @return All the books with the author in an ArrayList.
      */
@@ -85,6 +89,7 @@ public class BookRegister {
 
     /**
      * Method which returns the book with a certain EAN number.
+     *
      * @param ean EAN number of the book the user wishes to search for
      * @return The book with the given EAN number.
      */
@@ -99,15 +104,18 @@ public class BookRegister {
         boolean found = false;
         Scanner sc = new Scanner(System.in);
         Iterator<Book> bookIterator = this.getIterator();
+        ArrayList<Book> foundBooks = new ArrayList<>();
         while (bookIterator.hasNext()) {
             Book book = bookIterator.next();
             if (book.getBookTitle().toLowerCase().equals(deleteBook.toLowerCase())
                     || book.getBookAuthor().toLowerCase().equals(deleteBook.toLowerCase())
                     || book.getBookEAN().equals(deleteBook)) {
+                foundBooks.add(book);
                 found = true;
-                book.printBook();
+                /*
+                book.printBookSimple();
                 System.out.println("Type 'yes' if this is the book you wish to remove, " +
-                        "type 'no' if you do not wish to remove this book");
+                       "type 'no' if you do not wish to remove this book");
                 String ans = sc.next().toLowerCase();
                 if (ans.equals("yes")) {
                     System.out.println("You have deleted " + book.getBookTitle() + " From the bookregistry");
@@ -116,8 +124,14 @@ public class BookRegister {
                 } else {
                     System.out.println("You have not deleted the book");
                 }
+
+                 */
             }
         }
+        for(int i = 0; i < foundBooks.size(); i++) {
+            foundBooks.get(i).printBookSimple();
+        }
+
         if (!found) {
             System.out.println("This book does not exist");
         }
@@ -125,6 +139,7 @@ public class BookRegister {
 
     /**
      * Method which gets an iterator.
+     *
      * @return An iterator for the HashMap values of bookEANHashMap.
      */
     Iterator<Book> getIterator() {
