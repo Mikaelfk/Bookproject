@@ -183,7 +183,7 @@ public class BookLibraryApp {
                     System.out.println("A book with this EAN number already exists, please enter a different EAN number");
                 }
             } catch (Exception e) {
-                System.out.println("This is not a valid EAN number");
+                System.out.println("EAN numbers must consist of only numbers");
             }
         }
 

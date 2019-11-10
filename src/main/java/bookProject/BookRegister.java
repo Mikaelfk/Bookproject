@@ -135,7 +135,8 @@ public class BookRegister {
                 if (command.equals("yes")) {
                     bookEANHashMap.remove(array.get(i).getBookEAN());
                     System.out.println("The book has been removed from the registry");
-                } else {
+                }
+                else {
                     System.out.println("The book has not been removed");
                 }
             }
