@@ -213,10 +213,9 @@ public class BookLibraryApp {
         String search = scanner.nextLine();
         System.out.println("---------------------------------------------------------------------------------------");
         ArrayList<Book> foundBooks = bookRegister.searchBookPrint(search);
-        if(foundBooks.size() == 0) {
+        if (foundBooks.size() == 0) {
             System.out.println("No books in the registry correspond with the given information");
-        }
-        else {
+        } else {
             System.out.println("---------------------------------------------------------------------------------------");
             System.out.println("Choose which book you want to delete by typing in its number.");
             int number = scanner.nextInt();
