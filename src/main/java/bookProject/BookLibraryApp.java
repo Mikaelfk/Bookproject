@@ -84,10 +84,11 @@ public class BookLibraryApp {
         if (bookRegister.searchBookTitle(book).size() == 0) {
             System.out.println("There is no book in the registry with this title");
         } else {
-            System.out.println("----------------------------------");
+            System.out.println("---------------------------------------------------------------------------------------");
             for (int i = 0; i < bookRegister.searchBookTitle(book).size(); i++) {
-                bookRegister.searchBookTitle(book).get(i).printBook();
+                bookRegister.searchBookTitle(book).get(i).printBookSimple();
             }
+            System.out.println("---------------------------------------------------------------------------------------");
         }
     }
 
@@ -101,10 +102,12 @@ public class BookLibraryApp {
         if (bookRegister.searchBookAuthor(author).size() == 0) {
             System.out.println("There is no book in the registry written by this author");
         } else {
-            System.out.println("----------------------------------");
+            System.out.println("Here is a list of the books written by this author");
+            System.out.println("---------------------------------------------------------------------------------------");
             for (int i = 0; i < bookRegister.searchBookAuthor(author).size(); i++) {
-                bookRegister.searchBookAuthor(author).get(i).printBook();
+                bookRegister.searchBookAuthor(author).get(i).printBookSimple();
             }
+            System.out.println("---------------------------------------------------------------------------------------");
         }
     }
 
@@ -118,8 +121,10 @@ public class BookLibraryApp {
         if (bookRegister.searchBookEAN(EAN) == null) {
             System.out.println("There is no book in the registry with this EAN number");
         } else {
-            System.out.println("----------------------------------");
-            bookRegister.searchBookEAN(EAN).printBook();
+            System.out.println("Here is the book with this EAN number");
+            System.out.println("---------------------------------------------------------------------------------------");
+            bookRegister.searchBookEAN(EAN).printBookSimple();
+            System.out.println("---------------------------------------------------------------------------------------");
         }
     }
 
@@ -196,9 +201,8 @@ public class BookLibraryApp {
                 System.out.println("Please type in 'yes' or 'no'");
             }
         }
-        System.out.println("The book has been added to the registry");
-
         bookRegister.addBook(title, author, publisher, yearReleased, pages, EAN, loaned);
+        System.out.println("The book has been added to the registry");
     }
 
     /**
