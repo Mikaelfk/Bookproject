@@ -9,8 +9,13 @@ import java.util.Calendar;
  * @author Mikael Falkenberg Krog
  */
 public class BookLibraryApp {
-
+    /**
+     * Object of the BookRegister class saved in a field.
+     */
     private BookRegister bookRegister;
+    /**
+     * A Scanner which allows for user inputs.
+     */
     private Scanner scanner;
 
     /**

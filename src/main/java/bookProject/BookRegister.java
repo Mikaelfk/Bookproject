@@ -9,10 +9,11 @@ import java.util.Scanner;
  * @author Mikael Falkenberg Krog
  */
 public class BookRegister {
-
+    /**
+     * The HashMap which contains all the books
+     */
     private final HashMap<String, Book> bookEANHashMap;
 
-    //Constructor
     BookRegister() {
         bookEANHashMap = new HashMap<>();
     }
