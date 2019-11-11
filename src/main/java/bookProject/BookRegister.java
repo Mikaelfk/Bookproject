@@ -24,11 +24,11 @@ public class BookRegister {
     void addTestBooks() {
         bookEANHashMap.put("1234567890123", new Book("Title1", "Author1", "Publisher1",
                 2019, 500, "1234567890123", false));
-        bookEANHashMap.put("1234567890124", new Book("Title2", "Author2", "Publisher2",
+        bookEANHashMap.put("1234567890124", new Book("Title1", "Author2", "Publisher2",
                 2019, 500, "1234567890124", false));
-        bookEANHashMap.put("1234567890125", new Book("Title3", "Author3", "Publisher3",
+        bookEANHashMap.put("1234567890125", new Book("Title1", "Author3", "Publisher3",
                 2019, 500, "1234567890125", false));
-        bookEANHashMap.put("1234567890126", new Book("Title4", "Author4", "Publisher4",
+        bookEANHashMap.put("1234567890126", new Book("Title1", "Author4", "Publisher4",
                 2019, 500, "1234567890126", false));
     }
 
@@ -98,6 +98,7 @@ public class BookRegister {
 
     /**
      * This method returns an ArrayList, and also prints it. This is used for the delete function
+     *
      * @param searchBook The input the user wanted to search for
      * @return An ArrayList with all the matching books
      */
@@ -121,7 +122,8 @@ public class BookRegister {
 
     /**
      * Method used to delete a book from the registry.
-     * @param array The ArrayList found by the method searchBookPrint
+     *
+     * @param array  The ArrayList found by the method searchBookPrint
      * @param number The number of the book the user wants to delete
      */
     void deleteBook(ArrayList<Book> array, int number) {
@@ -136,11 +138,13 @@ public class BookRegister {
                 if (command.equals("yes")) {
                     bookEANHashMap.remove(array.get(i).getBookEAN());
                     System.out.println("The book has been removed from the registry");
-                }
-                else {
+                } else {
                     System.out.println("The book has not been removed");
                 }
             }
+        }
+        if(number > array.size() || number < 1){
+            System.out.println("No book has been deleted");
         }
     }
 

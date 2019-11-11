@@ -89,6 +89,7 @@ public class BookLibraryApp {
         if (bookRegister.searchBookTitle(book).size() == 0) {
             System.out.println("There is no book in the registry with this title");
         } else {
+            System.out.println("Here is a list of all the books with this title");
             System.out.println("---------------------------------------------------------------------------------------");
             for (int i = 0; i < bookRegister.searchBookTitle(book).size(); i++) {
                 bookRegister.searchBookTitle(book).get(i).printBookSimple();
@@ -223,7 +224,17 @@ public class BookLibraryApp {
         } else {
             System.out.println("---------------------------------------------------------------------------------------");
             System.out.println("Choose which book you want to delete by typing in its number.");
-            int number = scanner.nextInt();
+            boolean done = false;
+            int number = 0;
+            while(!done) {
+                try {
+                    scanner = new Scanner(System.in);
+                    number = scanner.nextInt();
+                    done = true;
+                }catch(Exception e) {
+                    System.out.println("You have to enter a number");
+                }
+            }
             bookRegister.deleteBook(foundBooks, number);
         }
 
